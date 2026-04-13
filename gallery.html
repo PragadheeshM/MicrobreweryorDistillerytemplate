@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Copper & Cask</title>
+  <meta name="description" content="Explore the visual world of Copper & Cask — our brewery, taproom, events, and the craft behind every pour." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script><script src="tailwind-config.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-white font-body">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex items-center justify-between nav-inner"><a href="index.html" class="flex items-center gap-2.5 group"><div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-accent transition-transform group-hover:rotate-6"><i class="fas fa-whiskey-glass text-white text-lg"></i></div><span class="font-display text-xl font-bold text-white tracking-tight">Copper <span class="text-accent">&</span> Cask</span></a><div class="hidden lg:flex items-center gap-7"><div class="nav-dropdown relative"><button class="nav-link flex items-center gap-1.5">Home <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button><div class="dropdown-menu"><a href="index.html"><i class="fas fa-gem"></i> Home 1</a><a href="index2.html"><i class="fas fa-fire"></i> Home 2</a></div></div><a href="about.html" class="nav-link">About</a><a href="services.html" class="nav-link">Services</a><a href="pricing.html" class="nav-link">Pricing</a><div class="nav-dropdown relative"><button class="nav-link flex items-center gap-1.5">Blog <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button><div class="dropdown-menu"><a href="blog.html"><i class="fas fa-newspaper"></i> Blog Listing</a><a href="blog-details.html"><i class="fas fa-pen-fancy"></i> Blog Post</a></div></div><div class="nav-dropdown relative"><button class="nav-link flex items-center gap-1.5">Dashboard <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button><div class="dropdown-menu"><a href="user-dashboard.html"><i class="fas fa-user"></i> User Dashboard</a><a href="admin-dashboard.html"><i class="fas fa-shield-halved"></i> Admin Dashboard</a></div></div><a href="contact.html" class="nav-link">Contact</a></div><div class="hidden lg:flex items-center gap-3"><button id="rtl-toggle" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-accent/20 text-white/70 hover:text-accent flex items-center justify-center transition-all" title="Toggle RTL/LTR"><i class="fas fa-globe"></i></button><a href="login.html" class="btn-outline text-sm">Login</a><a href="register.html" class="btn-primary text-sm">Register</a></div><button id="mobile-menu-btn" class="lg:hidden w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center"><i class="fas fa-bars text-lg"></i></button></div></div>
+    <div id="mobile-menu" class="lg:hidden"><div class="py-2"><button class="mobile-dropdown-trigger">Home <i class="fas fa-chevron-down chevron"></i></button><div class="mobile-sub-menu"><a href="index.html">Home 1</a><a href="index2.html">Home 2</a></div><a href="about.html" class="mobile-link">About</a><a href="services.html" class="mobile-link">Services</a><a href="pricing.html" class="mobile-link">Pricing</a><button class="mobile-dropdown-trigger">Blog <i class="fas fa-chevron-down chevron"></i></button><div class="mobile-sub-menu"><a href="blog.html">Blog Listing</a><a href="blog-details.html">Blog Post</a></div><button class="mobile-dropdown-trigger">Dashboard <i class="fas fa-chevron-down chevron"></i></button><div class="mobile-sub-menu"><a href="user-dashboard.html">User Dashboard</a><a href="admin-dashboard.html">Admin Dashboard</a></div><a href="contact.html" class="mobile-link">Contact</a><div class="flex items-center gap-3 px-4 pt-4 pb-2 border-t border-white/10 mt-2"><button id="rtl-toggle-mobile" class="w-9 h-9 rounded-lg bg-white/10 text-white/70 flex items-center justify-center"><i class="fas fa-globe text-sm"></i></button><a href="login.html" class="btn-outline text-sm flex-1 text-center">Login</a><a href="register.html" class="btn-primary text-sm flex-1 text-center">Register</a></div></div></div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="relative pt-32 pb-20 bg-primary overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-accent/10"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="section-label mx-auto border-accent/30 bg-accent/10 slide-up"><i class="fas fa-images text-xs"></i> Gallery</div>
+      <h1 class="font-display text-4xl sm:text-5xl font-extrabold text-white mb-4 slide-up" style="transition-delay:.1s">Moments at <span class="text-accent">Copper & Cask</span></h1>
+      <p class="text-white/50 max-w-xl mx-auto slide-up" style="transition-delay:.2s">A visual journey through our brewery, taproom, events, and the craft we love.</p>
+    </div>
+  </section>
+
+  <!-- FILTER -->
+  <section class="py-8 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap gap-3 justify-center">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="brewery">Brewery</button>
+        <button class="filter-btn" data-filter="taproom">Taproom</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+        <button class="filter-btn" data-filter="products">Products</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY GRID -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="gallery-item gallery-grid-item slide-up aspect-square" data-category="brewery">
+          <img src="https://images.unsplash.com/photo-1559526642-c3f001ea68ee?w=500&q=80&fit=crop" alt="Brewing hops" class="w-full h-full object-cover" />
+          <div class="gallery-overlay"><div class="text-white"><h4 class="font-display font-bold">Hop Yard Visit</h4><p class="text-sm text-white/70">Brewery</p></div></div>
+        </div>
+        <div class="gallery-item gallery-grid-item slide-up aspect-[3/4] md:row-span-2" data-category="products" style="transition-delay:.05s">
+          <img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=500&q=80&fit=crop" alt="Whiskey glass" class="w-full h-full object-cover" />
+          <div class="gallery-overlay"><div class="text-white"><h4 class="font-display font-bold">Barrel Reserve</h4><p class="text-sm text-white/70">Products</p></div></div>
+        </div>
+        <div class="gallery-item gallery-grid-item slide-up aspect-square" data-category="taproom" style="transition-delay:.1s">
+          <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=500&q=80&fit=crop" alt="Taproom bar" class="w-full h-full object-cover" />
+          <div class="gallery-overlay"><div class="text-white"><h4 class="font-display font-bold">The Bar</h4><p class="text-sm text-white/70">Taproom</p></div></div>
+        </div>
+        <div class="gallery-item gallery-grid-item slide-up aspect-square" data-category="events" style="transition-delay:.15s">
+          <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=500&q=80&fit=crop" alt="Event cocktails" class="w-full h-full object-cover" />
+          <div class="gallery-overlay"><div class="text-white"><h4 class="font-display font-bold">Spring Festival</h4><p class="text-sm text-white/70">Events</p></div></div>
+        </div>
+        <div class="gallery-item gallery-grid-item slide-up aspect-square" data-category="brewery">
+          <img src="https://images.unsplash.com/photo-1532634993-15f421e42ec0?w=500&q=80&fit=crop" alt="Barrels" class="w-full h-full object-cover" />
+          <div class="gallery-overlay"><div class="text-white"><h4 class="font-display font-bold">Barrel Room</h4><p class="text-sm text-white/70">Brewery</p></div></div>
+        </div>
+        <div class="gallery-item gallery-grid-item slide-up aspect-square" data-category="products" style="transition-delay:.05s">
+          <img src="https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=500&q=80&fit=crop" alt="Beer flight" class="w-full h-full object-cover" />
+          <div class="gallery-overlay"><div class="text-white"><h4 class="font-display font-bold">Tasting Flight</h4><p class="text-sm text-white/70">Products</p></div></div>
+        </div>
+        <div class="gallery-item gallery-grid-item slide-up aspect-square" data-category="taproom" style="transition-delay:.1s">
+          <img src="https://images.unsplash.com/photo-1584225064785-c62a8b43d148?w=500&q=80&fit=crop" alt="Interior" class="w-full h-full object-cover" />
+          <div class="gallery-overlay"><div class="text-white"><h4 class="font-display font-bold">Cozy Interior</h4><p class="text-sm text-white/70">Taproom</p></div></div>
+        </div>
+        <div class="gallery-item gallery-grid-item slide-up aspect-square" data-category="products" style="transition-delay:.15s">
+          <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?w=500&q=80&fit=crop" alt="Beer lineup" class="w-full h-full object-cover" />
+          <div class="gallery-overlay"><div class="text-white"><h4 class="font-display font-bold">New Releases</h4><p class="text-sm text-white/70">Products</p></div></div>
+        </div>
+        <div class="gallery-item gallery-grid-item slide-up aspect-square" data-category="events">
+          <img src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?w=500&q=80&fit=crop" alt="Storage" class="w-full h-full object-cover" />
+          <div class="gallery-overlay"><div class="text-white"><h4 class="font-display font-bold">Cellar Access</h4><p class="text-sm text-white/70">Events</p></div></div>
+        </div>
+        <div class="gallery-item gallery-grid-item slide-up aspect-square" data-category="brewery" style="transition-delay:.05s">
+          <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=500&q=80&fit=crop" alt="Spirits" class="w-full h-full object-cover" />
+          <div class="gallery-overlay"><div class="text-white"><h4 class="font-display font-bold">Distillation</h4><p class="text-sm text-white/70">Brewery</p></div></div>
+        </div>
+        <div class="gallery-item gallery-grid-item slide-up aspect-square" data-category="taproom" style="transition-delay:.1s">
+          <img src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=500&q=80&fit=crop" alt="Night bar" class="w-full h-full object-cover" />
+          <div class="gallery-overlay"><div class="text-white"><h4 class="font-display font-bold">Evening Vibes</h4><p class="text-sm text-white/70">Taproom</p></div></div>
+        </div>
+        <div class="gallery-item gallery-grid-item slide-up aspect-square" data-category="events" style="transition-delay:.15s">
+          <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=500&q=80&fit=crop" alt="Live music" class="w-full h-full object-cover" />
+          <div class="gallery-overlay"><div class="text-white"><h4 class="font-display font-bold">Live Music Night</h4><p class="text-sm text-white/70">Events</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary-dark text-white pt-20 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <!-- Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-2.5 mb-5">
+            <div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center">
+              <i class="fas fa-whiskey-glass text-white text-lg"></i>
+            </div>
+            <span class="font-display text-xl font-bold">Copper <span class="text-accent">&</span> Cask</span>
+          </a>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">Crafted with Passion, Poured with Pride. Premium craft spirits and brews since 2010.</p>
+          <div class="flex gap-3">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-display font-semibold text-lg mb-5">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="about.html" class="text-gray-400 hover:text-accent transition-colors text-sm">About Us</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Our Services</a></li>
+            <li><a href="pricing.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Pricing & Plans</a></li>
+            <li><a href="gallery.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Gallery</a></li>
+            <li><a href="blog.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Blog</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Offerings -->
+        <div>
+          <h4 class="font-display font-semibold text-lg mb-5">Our Offerings</h4>
+          <ul class="space-y-3">
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Craft Beers</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Small Batch Spirits</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Brewery Tours</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Private Events</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Tasting Sessions</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Home Delivery</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="font-display font-semibold text-lg mb-5">Contact Us</h4>
+          <ul class="space-y-4 text-gray-400 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-accent mt-1"></i>
+              <span>123 Barrel Lane,<br>Portland, OR 97201</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-phone text-accent"></i>
+              <span>+1 (503) 555-0149</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-envelope text-accent"></i>
+              <span>hello@copperandcask.com</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-clock text-accent"></i>
+              <span>Tue–Sun: 12pm – 11pm</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-white/10 pt-8 flex justify-center items-center">
+        <p class="text-gray-500 text-sm">&copy; 2026 Copper & Cask. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast-container"></div>
+  <script src="main.js"></script>
+</body>
+</html>

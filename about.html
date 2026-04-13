@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Copper & Cask</title>
+  <meta name="description" content="Learn about Copper & Cask's journey from a small homebrew project to Portland's premier craft brewery and distillery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind-config.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+<body class="bg-white font-body">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between nav-inner">
+        <div class="flex items-center gap-10">
+          <a href="index.html" class="flex items-center gap-2.5 group"><div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-accent transition-transform group-hover:rotate-6"><i class="fas fa-whiskey-glass text-white text-lg"></i></div><span class="font-display text-xl font-bold text-white tracking-tight">Copper <span class="text-accent">&</span> Cask</span></a>
+          <div class="hidden xl:flex items-center gap-7">
+            <div class="nav-dropdown relative"><button class="nav-link flex items-center gap-1.5">Home <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button><div class="dropdown-menu"><a href="index.html"><i class="fas fa-gem"></i> Home 1</a><a href="index2.html"><i class="fas fa-fire"></i> Home 2</a></div></div>
+            <a href="about.html" class="nav-link active">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <div class="nav-dropdown relative"><button class="nav-link flex items-center gap-1.5">Blog <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button><div class="dropdown-menu"><a href="blog.html"><i class="fas fa-newspaper"></i> Blog Listing</a><a href="blog-details.html"><i class="fas fa-pen-fancy"></i> Blog Post</a></div></div>
+            <div class="nav-dropdown relative"><button class="nav-link flex items-center gap-1.5">Dashboard <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button><div class="dropdown-menu"><a href="user-dashboard.html"><i class="fas fa-user"></i> User Dashboard</a><a href="admin-dashboard.html"><i class="fas fa-shield-halved"></i> Admin Dashboard</a></div></div>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 ml-auto">
+          <div class="hidden md:flex items-center gap-3">
+            <button id="theme-toggle" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-accent/20 text-white/70 hover:text-accent flex items-center justify-center transition-all" title="Toggle Dark / Light Mode">
+              <i class="fas fa-moon theme-icon"></i>
+            </button>
+            <button id="rtl-toggle" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-accent/20 text-white/70 hover:text-accent flex items-center justify-center transition-all" title="Toggle RTL/LTR">
+              <i class="fas fa-globe"></i>
+            </button>
+            <a href="login.html" class="btn-outline text-sm">Login</a>
+            <a href="register.html" class="btn-primary text-sm">Register</a>
+          </div>
+          <!-- Mobile Menu Button -->
+          <div class="flex items-center xl:hidden gap-3">
+            <div class="mobile-toggles md:hidden flex items-center gap-2">
+              <button id="theme-toggle-mobile" class="w-9 h-9 rounded-lg bg-white/10 text-white/70 flex items-center justify-center">
+                <i class="fas fa-moon theme-icon text-sm"></i>
+              </button>
+              <button id="rtl-toggle-mobile" class="w-9 h-9 rounded-lg bg-white/10 text-white/70 flex items-center justify-center">
+                <i class="fas fa-globe text-sm"></i>
+              </button>
+            </div>
+            <button id="mobile-menu-btn" class="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center">
+              <i class="fas fa-bars text-lg"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="xl:hidden"><div class="py-2">
+      <button class="mobile-dropdown-trigger">Home <i class="fas fa-chevron-down chevron"></i></button><div class="mobile-sub-menu"><a href="index.html">Home 1</a><a href="index2.html">Home 2</a></div>
+      <a href="about.html" class="mobile-link active">About</a><a href="services.html" class="mobile-link">Services</a><a href="pricing.html" class="mobile-link">Pricing</a>
+      <button class="mobile-dropdown-trigger">Blog <i class="fas fa-chevron-down chevron"></i></button><div class="mobile-sub-menu"><a href="blog.html">Blog Listing</a><a href="blog-details.html">Blog Post</a></div>
+      <button class="mobile-dropdown-trigger">Dashboard <i class="fas fa-chevron-down chevron"></i></button><div class="mobile-sub-menu"><a href="user-dashboard.html">User Dashboard</a><a href="admin-dashboard.html">Admin Dashboard</a></div>
+      <a href="contact.html" class="mobile-link">Contact</a>
+        <div class="md:hidden flex items-center gap-3 px-4 pt-4 pb-2 border-t border-white/10 mt-2">
+          <a href="login.html" class="btn-outline text-sm flex-1 text-center">Login</a>
+          <a href="register.html" class="btn-primary text-sm flex-1 text-center">Register</a>
+        </div></div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="relative pt-32 pb-20 bg-primary overflow-hidden">
+    <div class="absolute inset-0"><img src="https://images.unsplash.com/photo-1532634993-15f421e42ec0?w=1920&q=80&fit=crop" alt="Barrels" class="w-full h-full object-cover opacity-20" /></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="section-label mx-auto border-accent/30 bg-accent/10 slide-up"><i class="fas fa-book-open text-xs"></i> Our Story</div>
+      <h1 class="font-display text-4xl sm:text-5xl font-extrabold text-white mb-4 slide-up" style="transition-delay:.1s">About <span class="text-accent">Copper & Cask</span></h1>
+      <p class="text-white/50 max-w-xl mx-auto slide-up" style="transition-delay:.2s">From humble homebrew beginnings to award-winning craft — discover the passion behind every pour.</p>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="py-24 bg-white relative overflow-hidden">
+    <div class="blob blob-accent w-80 h-80 -top-40 -right-40 opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
+        <div class="slide-left">
+          <div class="relative">
+            <div class="rounded-3xl overflow-hidden"><img src="https://images.unsplash.com/photo-1559526642-c3f001ea68ee?w=700&q=80&fit=crop" alt="Brewery founders" class="w-full h-[480px] object-cover" /></div>
+            <div class="absolute -bottom-6 -right-6 bg-accent text-white rounded-2xl p-6 shadow-accent-lg hidden lg:block">
+              <div class="text-4xl font-display font-extrabold">2010</div>
+              <div class="text-sm opacity-80">Founded</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-right">
+          <div class="section-label"><i class="fas fa-feather-pointed text-xs"></i> The Beginning</div>
+          <h2 class="section-title">Two Friends, One <span>Dream</span></h2>
+          <p class="text-gray-600 mb-6">In the winter of 2010, childhood friends Marcus Chen and David O'Brien turned their garage homebrew hobby into something bigger. Armed with little more than a secondhand copper kettle and an obsessive love for craft beer, they founded Copper & Cask in Portland's Pearl District.</p>
+          <p class="text-gray-500 mb-8">What started as weekend experiments quickly gained a cult following at local farmers markets. By 2013, they'd moved into a converted warehouse, added a small distillery, and never looked back. Today, Copper & Cask produces over 50 unique craft beers and 12 premium spirits, distributed across the Pacific Northwest.</p>
+          <div class="flex gap-4">
+            <a href="services.html" class="btn-primary"><i class="fas fa-beer-mug-empty"></i> Our Craft</a>
+            <a href="contact.html" class="btn-outline-dark"><i class="fas fa-envelope"></i> Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VALUES -->
+  <section class="py-24 bg-secondary relative overflow-hidden bg-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 slide-up">
+        <div class="section-label mx-auto"><i class="fas fa-compass text-xs"></i> Our Values</div>
+        <h2 class="section-title">What <span>Drives</span> Us</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children">
+        <div class="card hover-glow text-center">
+          <div class="icon-box icon-box-lg mx-auto mb-5"><i class="fas fa-hand-holding-heart"></i></div>
+          <h3 class="font-display text-xl font-bold mb-3">Authenticity</h3>
+          <p class="text-gray-500 text-sm">No shortcuts. We honor traditional methods while embracing innovation that respects our craft.</p>
+        </div>
+        <div class="card hover-glow text-center">
+          <div class="icon-box icon-box-lg mx-auto mb-5"><i class="fas fa-earth-americas"></i></div>
+          <h3 class="font-display text-xl font-bold mb-3">Sustainability</h3>
+          <p class="text-gray-500 text-sm">Solar-powered facility, compostable grain disposal, and partnerships with local organic farms.</p>
+        </div>
+        <div class="card hover-glow text-center">
+          <div class="icon-box icon-box-lg mx-auto mb-5"><i class="fas fa-handshake"></i></div>
+          <h3 class="font-display text-xl font-bold mb-3">Community</h3>
+          <p class="text-gray-500 text-sm">We donate 5% of profits to local charities and host free community events monthly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 slide-up">
+        <div class="section-label mx-auto"><i class="fas fa-timeline text-xs"></i> Our Journey</div>
+        <h2 class="section-title">Milestones That <span>Matter</span></h2>
+      </div>
+
+      <div class="relative">
+        <!-- Vertical Line -->
+        <div class="absolute left-6 lg:left-1/2 top-0 bottom-0 w-0.5 bg-accent/20 -translate-x-1/2"></div>
+
+        <div class="space-y-12">
+          <div class="relative flex items-start gap-6 lg:gap-12 slide-up">
+            <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-bold text-sm flex-shrink-0 z-10 shadow-accent">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <div class="card flex-1">
+              <div class="badge badge-accent mb-2">2010</div>
+              <h3 class="font-display font-bold text-lg mb-2">The Garage Era</h3>
+              <p class="text-gray-500 text-sm">Founded by Marcus & David with a single copper kettle and a dream. First batch: 5 gallons of amber ale.</p>
+            </div>
+          </div>
+          <div class="relative flex items-start gap-6 lg:gap-12 slide-up" style="transition-delay:.1s">
+            <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-bold text-sm flex-shrink-0 z-10 shadow-accent">
+              <i class="fas fa-store"></i>
+            </div>
+            <div class="card flex-1">
+              <div class="badge badge-accent mb-2">2013</div>
+              <h3 class="font-display font-bold text-lg mb-2">The Warehouse</h3>
+              <p class="text-gray-500 text-sm">Moved into a 5,000 sq ft converted warehouse. Added distillery operations and opened our first public taproom.</p>
+            </div>
+          </div>
+          <div class="relative flex items-start gap-6 lg:gap-12 slide-up" style="transition-delay:.2s">
+            <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-bold text-sm flex-shrink-0 z-10 shadow-accent">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="card flex-1">
+              <div class="badge badge-accent mb-2">2017</div>
+              <h3 class="font-display font-bold text-lg mb-2">National Recognition</h3>
+              <p class="text-gray-500 text-sm">Won "Best New Brewery" at the Great American Beer Festival and expanded distribution to 5 states.</p>
+            </div>
+          </div>
+          <div class="relative flex items-start gap-6 lg:gap-12 slide-up" style="transition-delay:.3s">
+            <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-bold text-sm flex-shrink-0 z-10 shadow-accent">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="card flex-1">
+              <div class="badge badge-accent mb-2">2024</div>
+              <h3 class="font-display font-bold text-lg mb-2">The Expansion</h3>
+              <p class="text-gray-500 text-sm">Opened a second location, launched online ordering, and introduced our signature spirits line nationwide.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR TEAM -->
+  <section class="py-24 bg-secondary relative overflow-hidden bg-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 slide-up">
+        <div class="section-label mx-auto"><i class="fas fa-users text-xs"></i> The Team</div>
+        <h2 class="section-title">Meet the <span>Makers</span></h2>
+        <p class="section-subtitle mx-auto">The talented people behind every batch, pour, and experience.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
+        <div class="card text-center hover-float group p-0 overflow-hidden">
+          <div class="relative overflow-hidden"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80&fit=crop" alt="Marcus Chen" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" /></div>
+          <div class="p-5">
+            <h3 class="font-display font-bold text-lg">Marcus Chen</h3>
+            <p class="text-accent text-sm font-semibold mb-2">Co-Founder & Head Brewer</p>
+            <div class="flex justify-center gap-3">
+              <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card text-center hover-float group p-0 overflow-hidden">
+          <div class="relative overflow-hidden"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80&fit=crop" alt="David O'Brien" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" /></div>
+          <div class="p-5">
+            <h3 class="font-display font-bold text-lg">David O'Brien</h3>
+            <p class="text-accent text-sm font-semibold mb-2">Co-Founder & Master Distiller</p>
+            <div class="flex justify-center gap-3">
+              <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card text-center hover-float group p-0 overflow-hidden">
+          <div class="relative overflow-hidden"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80&fit=crop" alt="Elena Vasquez" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" /></div>
+          <div class="p-5">
+            <h3 class="font-display font-bold text-lg">Elena Vasquez</h3>
+            <p class="text-accent text-sm font-semibold mb-2">Operations Manager</p>
+            <div class="flex justify-center gap-3">
+              <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card text-center hover-float group p-0 overflow-hidden">
+          <div class="relative overflow-hidden"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&fit=crop" alt="Liam Torres" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" /></div>
+          <div class="p-5">
+            <h3 class="font-display font-bold text-lg">Liam Torres</h3>
+            <p class="text-accent text-sm font-semibold mb-2">Head Chef & Pairings</p>
+            <div class="flex justify-center gap-3">
+              <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS & RECOGNITION -->
+  <section class="py-24 bg-primary relative overflow-hidden">
+    <div class="absolute inset-0"><img src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?w=1920&q=80&fit=crop" alt="Barrels" class="w-full h-full object-cover opacity-10" /></div>
+    <div class="absolute inset-0 bg-primary/85"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-16 slide-up">
+        <div class="section-label mx-auto border-accent/30 bg-accent/10"><i class="fas fa-award text-xs"></i> Recognition</div>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mb-4">Awards & <span class="text-accent">Accolades</span></h2>
+        <p class="text-white/50 max-w-xl mx-auto">Over a decade of craft excellence, recognized by the industry's most prestigious organizations.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
+        <div class="glass rounded-2xl p-6 text-center hover-float">
+          <div class="w-16 h-16 rounded-2xl bg-accent/15 flex items-center justify-center mx-auto mb-4 text-accent text-2xl"><i class="fas fa-trophy"></i></div>
+          <div class="text-3xl font-display font-extrabold text-white mb-1">30+</div>
+          <p class="text-white/50 text-sm">Industry Awards</p>
+        </div>
+        <div class="glass rounded-2xl p-6 text-center hover-float">
+          <div class="w-16 h-16 rounded-2xl bg-accent/15 flex items-center justify-center mx-auto mb-4 text-accent text-2xl"><i class="fas fa-medal"></i></div>
+          <div class="text-3xl font-display font-extrabold text-white mb-1">3x</div>
+          <p class="text-white/50 text-sm">Best Brewery PNW</p>
+        </div>
+        <div class="glass rounded-2xl p-6 text-center hover-float">
+          <div class="w-16 h-16 rounded-2xl bg-accent/15 flex items-center justify-center mx-auto mb-4 text-accent text-2xl"><i class="fas fa-newspaper"></i></div>
+          <div class="text-3xl font-display font-extrabold text-white mb-1">50+</div>
+          <p class="text-white/50 text-sm">Media Features</p>
+        </div>
+        <div class="glass rounded-2xl p-6 text-center hover-float">
+          <div class="w-16 h-16 rounded-2xl bg-accent/15 flex items-center justify-center mx-auto mb-4 text-accent text-2xl"><i class="fas fa-star"></i></div>
+          <div class="text-3xl font-display font-extrabold text-white mb-1">4.9</div>
+          <p class="text-white/50 text-sm">Average Rating</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="relative py-20 overflow-hidden">
+    <div class="absolute inset-0"><img src="https://images.unsplash.com/photo-1559526642-c3f001ea68ee?w=1920&q=80&fit=crop" alt="Brewery" class="w-full h-full object-cover" /></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-accent/30"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center slide-up">
+      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mb-4">Come Visit Our <span class="text-accent">Taproom</span></h2>
+      <p class="text-white/60 text-lg mb-8 max-w-2xl mx-auto">We'd love to share our story over a cold pint. Walk in anytime or book a private tour.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contact.html" class="btn-primary text-base px-8 py-4"><i class="fas fa-map-location-dot"></i> Visit Us</a>
+        <a href="services.html" class="btn-outline text-base px-8 py-4"><i class="fas fa-beer-mug-empty"></i> Explore Offerings</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary-dark text-white pt-20 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-12 mb-16">
+        <!-- Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-2.5 mb-5">
+            <div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center">
+              <i class="fas fa-whiskey-glass text-white text-lg"></i>
+            </div>
+            <span class="font-display text-xl font-bold">Copper <span class="text-accent">&</span> Cask</span>
+          </a>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">Crafted with Passion, Poured with Pride. Premium craft spirits and brews since 2010.</p>
+          <div class="flex gap-3">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-display font-semibold text-lg mb-5">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="about.html" class="text-gray-400 hover:text-accent transition-colors text-sm">About Us</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Our Services</a></li>
+            <li><a href="pricing.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Pricing & Plans</a></li>
+            <li><a href="gallery.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Gallery</a></li>
+            <li><a href="blog.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Blog</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Offerings -->
+        <div>
+          <h4 class="font-display font-semibold text-lg mb-5">Our Offerings</h4>
+          <ul class="space-y-3">
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Craft Beers</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Small Batch Spirits</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Brewery Tours</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Private Events</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Tasting Sessions</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Home Delivery</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="font-display font-semibold text-lg mb-5">Contact Us</h4>
+          <ul class="space-y-4 text-gray-400 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-accent mt-1"></i>
+              <span>123 Barrel Lane,<br>Portland, OR 97201</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-phone text-accent"></i>
+              <span>+1 (503) 555-0149</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-envelope text-accent"></i>
+              <span>hello@copperandcask.com</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-clock text-accent"></i>
+              <span>Tue–Sun: 12pm – 11pm</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-white/10 pt-8 flex justify-center items-center">
+        <p class="text-gray-500 text-sm">&copy; 2026 Copper & Cask. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast-container"></div>
+  <script src="main.js"></script>
+</body>
+</html>

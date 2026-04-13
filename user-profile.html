@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile — Copper & Cask</title>
+  <meta name="description" content="Manage your Copper & Cask profile, update your preferences, and view your membership details." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script><script src="tailwind-config.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="font-body bg-secondary-light">
+
+  <div class="dashboard-layout">
+    <!-- SIDEBAR -->
+    <aside class="dashboard-sidebar">
+      <div class="px-6 mb-8"><a href="index.html" class="flex items-center gap-2.5"><div class="w-9 h-9 rounded-lg bg-accent flex items-center justify-center"><i class="fas fa-whiskey-glass text-white text-sm"></i></div><span class="font-display text-lg font-bold text-white">C&C</span></a></div>
+      <div class="px-4 mb-4"><p class="text-xs uppercase tracking-wider text-white/30 px-2">Main</p></div>
+      <nav>
+        <a href="user-dashboard.html" class="sidebar-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="#" class="sidebar-link"><i class="fas fa-box"></i> My Orders</a>
+        <a href="#" class="sidebar-link"><i class="fas fa-credit-card"></i> Subscriptions</a>
+        <a href="#" class="sidebar-link"><i class="fas fa-ticket"></i> Support Tickets</a>
+        <a href="user-profile.html" class="sidebar-link active"><i class="fas fa-user-gear"></i> Profile</a>
+      </nav>
+      <div class="px-4 mt-6 mb-4"><p class="text-xs uppercase tracking-wider text-white/30 px-2">Pages</p></div>
+      <nav>
+        <a href="index.html" class="sidebar-link"><i class="fas fa-home"></i> Homepage</a>
+        <a href="services.html" class="sidebar-link"><i class="fas fa-concierge-bell"></i> Services</a>
+        <a href="pricing.html" class="sidebar-link"><i class="fas fa-tags"></i> Pricing</a>
+      </nav>
+      <div class="mt-auto px-4 pt-6 border-t border-white/10 mt-6">
+        <div class="flex items-center gap-3 px-2 py-3"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80&fit=crop" alt="User" class="w-9 h-9 rounded-full object-cover" /><div><p class="text-sm font-semibold text-white">James K.</p><p class="text-xs text-white/40">Growler Member</p></div><a href="login.html" class="ml-auto text-white/30 hover:text-accent transition-colors"><i class="fas fa-right-from-bracket"></i></a></div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+      <div class="flex items-center justify-between mb-8">
+        <div class="flex items-center gap-4">
+          <button id="sidebar-toggle" class="lg:hidden w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-primary"><i class="fas fa-bars"></i></button>
+          <div><h1 class="font-display text-2xl font-bold text-primary">My Profile</h1><p class="text-gray-500 text-sm">Manage your account settings and preferences.</p></div>
+        </div>
+        <button id="rtl-toggle" class="w-10 h-10 rounded-xl bg-white shadow-sm text-primary/60 hover:text-accent flex items-center justify-center transition-all" title="Toggle RTL/LTR"><i class="fas fa-globe"></i></button>
+      </div>
+
+      <!-- Profile Header -->
+      <div class="bg-white rounded-2xl shadow-sm overflow-hidden mb-8">
+        <div class="h-32 bg-gradient-to-r from-primary via-primary-light to-accent/30"></div>
+        <div class="px-6 pb-6 flex flex-col sm:flex-row items-start gap-5 -mt-12">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80&fit=crop" alt="Profile" class="w-24 h-24 rounded-2xl object-cover border-4 border-white shadow-lg" />
+            <button class="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center text-xs shadow-accent"><i class="fas fa-camera"></i></button>
+          </div>
+          <div class="pt-2 sm:pt-6">
+            <h2 class="font-display text-xl font-bold">James Kendall</h2>
+            <p class="text-gray-500 text-sm">james.kendall@email.com</p>
+            <div class="flex items-center gap-3 mt-2"><span class="badge badge-accent">Growler Club</span><span class="badge badge-success">Active</span></div>
+          </div>
+          <div class="sm:ml-auto sm:pt-6">
+            <button class="btn-primary text-sm" onclick="showToast('info','Profile','Edit mode is a mock feature.')"><i class="fas fa-pen"></i> Edit Profile</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Form -->
+      <div class="grid lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 space-y-6">
+          <!-- Personal Info -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm">
+            <h3 class="font-display font-bold text-lg mb-6">Personal Information</h3>
+            <form data-mock-form class="space-y-5">
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div><label class="block text-sm font-semibold mb-2 text-gray-700">First Name</label><input type="text" class="form-input" value="James" /></div>
+                <div><label class="block text-sm font-semibold mb-2 text-gray-700">Last Name</label><input type="text" class="form-input" value="Kendall" /></div>
+              </div>
+              <div><label class="block text-sm font-semibold mb-2 text-gray-700">Email</label><input type="email" class="form-input" value="james.kendall@email.com" /></div>
+              <div><label class="block text-sm font-semibold mb-2 text-gray-700">Phone</label><input type="tel" class="form-input" value="+1 (503) 555-1234" /></div>
+              <div><label class="block text-sm font-semibold mb-2 text-gray-700">Address</label><input type="text" class="form-input" value="456 Brew Street, Portland, OR 97205" /></div>
+              <div><label class="block text-sm font-semibold mb-2 text-gray-700">Bio</label><textarea class="form-input" rows="3">Portland-based craft beer enthusiast. IPA lover. Weekend homebrewer.</textarea></div>
+              <button type="submit" class="btn-primary"><i class="fas fa-save"></i> Save Changes</button>
+            </form>
+          </div>
+
+          <!-- Password -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm">
+            <h3 class="font-display font-bold text-lg mb-6">Change Password</h3>
+            <form data-mock-form class="space-y-5">
+              <div><label class="block text-sm font-semibold mb-2 text-gray-700">Current Password</label><input type="password" class="form-input" placeholder="••••••••" /></div>
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div><label class="block text-sm font-semibold mb-2 text-gray-700">New Password</label><input type="password" class="form-input" placeholder="••••••••" /></div>
+                <div><label class="block text-sm font-semibold mb-2 text-gray-700">Confirm Password</label><input type="password" class="form-input" placeholder="••••••••" /></div>
+              </div>
+              <button type="submit" class="btn-primary"><i class="fas fa-lock"></i> Update Password</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Sidebar Info -->
+        <div class="space-y-6">
+          <!-- Membership -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm">
+            <h3 class="font-display font-bold text-lg mb-4">Membership</h3>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-gray-500 text-sm">Plan</span>
+              <span class="font-semibold text-sm text-accent">Growler Club</span>
+            </div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-gray-500 text-sm">Status</span>
+              <span class="badge badge-success">Active</span>
+            </div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-gray-500 text-sm">Since</span>
+              <span class="font-semibold text-sm">Jan 2024</span>
+            </div>
+            <div class="flex items-center justify-between mb-5">
+              <span class="text-gray-500 text-sm">Next billing</span>
+              <span class="font-semibold text-sm">May 1, 2026</span>
+            </div>
+            <a href="pricing.html" class="btn-accent-outline w-full text-sm"><i class="fas fa-arrow-up"></i> Upgrade Plan</a>
+          </div>
+
+          <!-- Loyalty Points -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm">
+            <h3 class="font-display font-bold text-lg mb-4">Loyalty Points</h3>
+            <div class="text-center mb-4">
+              <div class="text-4xl font-display font-extrabold text-accent">1,240</div>
+              <p class="text-gray-400 text-sm">Points earned</p>
+            </div>
+            <div class="bg-secondary rounded-xl p-3 text-center">
+              <p class="text-xs text-gray-500">260 points until <strong class="text-primary">Platinum Tier</strong></p>
+              <div class="w-full bg-secondary-dark rounded-full h-2 mt-2">
+                <div class="bg-accent rounded-full h-2" style="width: 83%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preferences -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm">
+            <h3 class="font-display font-bold text-lg mb-4">Preferences</h3>
+            <div class="space-y-4">
+              <label class="flex items-center justify-between cursor-pointer">
+                <span class="text-sm text-gray-700">Email Notifications</span>
+                <div class="relative">
+                  <input type="checkbox" class="sr-only" checked>
+                  <div class="w-10 h-5 bg-accent rounded-full"></div>
+                  <div class="absolute left-5 top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform"></div>
+                </div>
+              </label>
+              <label class="flex items-center justify-between cursor-pointer">
+                <span class="text-sm text-gray-700">SMS Notifications</span>
+                <div class="relative">
+                  <input type="checkbox" class="sr-only">
+                  <div class="w-10 h-5 bg-gray-200 rounded-full"></div>
+                  <div class="absolute left-0.5 top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform"></div>
+                </div>
+              </label>
+              <label class="flex items-center justify-between cursor-pointer">
+                <span class="text-sm text-gray-700">Newsletter</span>
+                <div class="relative">
+                  <input type="checkbox" class="sr-only" checked>
+                  <div class="w-10 h-5 bg-accent rounded-full"></div>
+                  <div class="absolute left-5 top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform"></div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="main.js"></script>
+</body>
+</html>

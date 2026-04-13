@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — Copper & Cask</title>
+  <meta name="description" content="Sign in to your Copper & Cask membership account." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script><script src="tailwind-config.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+<body class="font-body">
+
+  <!-- FULL-SCREEN AUTH -->
+  <div class="auth-bg">
+    <!-- Background Image -->
+    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1920&q=80&fit=crop" alt="Brewery bar background" />
+
+    <!-- Auth Card -->
+    <div class="auth-card animate-fade-in">
+      <!-- RTL Toggle -->
+      <div class="absolute top-4 right-4 flex gap-2">
+        <button id="rtl-toggle" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-accent/20 text-white/60 hover:text-accent flex items-center justify-center transition-all text-sm" title="Toggle RTL/LTR">
+          <i class="fas fa-globe"></i>
+        </button>
+      </div>
+
+      <!-- Logo -->
+      <div class="text-center mb-8">
+        <a href="index.html" class="inline-flex items-center gap-2.5">
+          <div class="w-11 h-11 rounded-xl bg-accent flex items-center justify-center shadow-accent">
+            <i class="fas fa-whiskey-glass text-white text-lg"></i>
+          </div>
+          <span class="font-display text-2xl font-bold text-white tracking-tight">Copper <span class="text-accent">&</span> Cask</span>
+        </a>
+        <p class="text-white/40 text-sm mt-3">Welcome back. Sign in to continue.</p>
+      </div>
+
+      <!-- Form -->
+      <form data-auth-form="login" class="space-y-5">
+        <div class="input-group">
+          <i class="fas fa-envelope input-icon"></i>
+          <input type="email" class="auth-input" placeholder="Email address" required />
+        </div>
+        <div class="input-group">
+          <i class="fas fa-lock input-icon"></i>
+          <input type="password" class="auth-input" placeholder="Password" required />
+        </div>
+
+        <div class="flex items-center justify-between text-sm">
+          <label class="flex items-center gap-2 text-white/50 cursor-pointer">
+            <input type="checkbox" class="w-4 h-4 rounded border-white/20 bg-white/10 text-accent focus:ring-accent" />
+            Remember me
+          </label>
+          <a href="#" class="text-accent hover:text-accent-light transition-colors">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn-primary w-full py-3">
+          <i class="fas fa-right-to-bracket"></i> Sign In
+        </button>
+      </form>
+
+      <!-- Divider -->
+      <div class="flex items-center gap-4 my-6">
+        <div class="flex-1 h-px bg-white/10"></div>
+        <span class="text-white/30 text-xs uppercase tracking-wider">or continue with</span>
+        <div class="flex-1 h-px bg-white/10"></div>
+      </div>
+
+      <!-- Social Login -->
+      <div class="grid grid-cols-3 gap-3 mb-6">
+        <button class="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-white/8 border border-white/10 text-white/60 hover:text-white hover:bg-white/15 transition-all text-sm">
+          <i class="fab fa-google"></i>
+        </button>
+        <button class="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-white/8 border border-white/10 text-white/60 hover:text-white hover:bg-white/15 transition-all text-sm">
+          <i class="fab fa-apple"></i>
+        </button>
+        <button class="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-white/8 border border-white/10 text-white/60 hover:text-white hover:bg-white/15 transition-all text-sm">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+      </div>
+
+      <!-- Footer -->
+      <p class="text-center text-white/40 text-sm">
+        Don't have an account? <a href="register.html" class="text-accent hover:text-accent-light font-semibold transition-colors">Create one</a>
+      </p>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="main.js"></script>
+</body>
+</html>

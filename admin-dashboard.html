@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — Copper & Cask</title>
+  <meta name="description" content="Copper & Cask admin panel — manage orders, revenue, and customer analytics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script><script src="tailwind-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+<body class="font-body bg-secondary-light">
+
+  <div class="dashboard-layout">
+    <!-- ══ SIDEBAR ═══════════════════════════════════════ -->
+    <aside class="dashboard-sidebar">
+      <div class="px-6 mb-8">
+        <a href="index.html" class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-lg bg-accent flex items-center justify-center"><i class="fas fa-whiskey-glass text-white text-sm"></i></div>
+          <span class="font-display text-lg font-bold text-white">C&C Admin</span>
+        </a>
+      </div>
+
+      <div class="px-4 mb-4"><p class="text-xs uppercase tracking-wider text-white/30 px-2">Overview</p></div>
+      <nav>
+        <a href="admin-dashboard.html" class="sidebar-link active"><i class="fas fa-chart-pie"></i> Dashboard</a>
+        <a href="#" class="sidebar-link"><i class="fas fa-users"></i> Customers</a>
+        <a href="#" class="sidebar-link"><i class="fas fa-box"></i> Orders</a>
+        <a href="#" class="sidebar-link"><i class="fas fa-beer-mug-empty"></i> Products</a>
+        <a href="#" class="sidebar-link"><i class="fas fa-calendar-days"></i> Events</a>
+      </nav>
+
+      <div class="px-4 mt-6 mb-4"><p class="text-xs uppercase tracking-wider text-white/30 px-2">Management</p></div>
+      <nav>
+        <a href="#" class="sidebar-link"><i class="fas fa-ticket"></i> Support</a>
+        <a href="#" class="sidebar-link"><i class="fas fa-newspaper"></i> Blog Posts</a>
+        <a href="#" class="sidebar-link"><i class="fas fa-image"></i> Gallery</a>
+        <a href="#" class="sidebar-link"><i class="fas fa-gear"></i> Settings</a>
+      </nav>
+
+      <div class="mt-auto px-4 pt-6 border-t border-white/10 mt-6">
+        <div class="flex items-center gap-3 px-2 py-3">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&q=80&fit=crop" alt="Admin" class="w-9 h-9 rounded-full object-cover" />
+          <div>
+            <p class="text-sm font-semibold text-white">Marcus C.</p>
+            <p class="text-xs text-white/40">Administrator</p>
+          </div>
+          <a href="login.html" class="ml-auto text-white/30 hover:text-accent transition-colors"><i class="fas fa-right-from-bracket"></i></a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ══ MAIN ══════════════════════════════════════════ -->
+    <main class="dashboard-main">
+      <!-- Top Bar -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        <div class="flex items-center gap-4">
+          <button id="sidebar-toggle" class="xl:hidden w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-primary flex-shrink-0"><i class="fas fa-bars"></i></button>
+          <div class="min-w-0">
+            <h1 class="font-display text-xl sm:text-2xl font-bold text-primary truncate">Admin Dashboard</h1>
+            <p class="text-gray-500 text-xs sm:text-sm truncate">Business performance and analytics.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="rtl-toggle" class="w-10 h-10 rounded-xl bg-white shadow-sm text-primary/60 hover:text-accent flex items-center justify-center transition-all" title="Toggle RTL/LTR"><i class="fas fa-globe"></i></button>
+          <button class="w-10 h-10 rounded-xl bg-white shadow-sm text-primary/60 hover:text-accent flex items-center justify-center transition-all relative"><i class="fas fa-bell"></i><span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span></button>
+        </div>
+      </div>
+
+      <!-- Stat Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div class="stat-card">
+          <div class="flex items-center justify-between mb-3">
+            <div class="icon-box icon-box-sm"><i class="fas fa-dollar-sign"></i></div>
+            <span class="text-green-500 text-sm font-semibold"><i class="fas fa-arrow-up text-xs"></i> 18%</span>
+          </div>
+          <h3 class="text-2xl font-display font-bold text-primary">$48,290</h3>
+          <p class="text-gray-400 text-sm">Total Revenue</p>
+        </div>
+        <div class="stat-card">
+          <div class="flex items-center justify-between mb-3">
+            <div class="icon-box icon-box-sm"><i class="fas fa-users"></i></div>
+            <span class="text-green-500 text-sm font-semibold"><i class="fas fa-arrow-up text-xs"></i> 7%</span>
+          </div>
+          <h3 class="text-2xl font-display font-bold text-primary">3,482</h3>
+          <p class="text-gray-400 text-sm">Active Members</p>
+        </div>
+        <div class="stat-card">
+          <div class="flex items-center justify-between mb-3">
+            <div class="icon-box icon-box-sm"><i class="fas fa-shopping-cart"></i></div>
+            <span class="text-amber-500 text-sm font-semibold"><i class="fas fa-minus text-xs"></i> 2%</span>
+          </div>
+          <h3 class="text-2xl font-display font-bold text-primary">1,205</h3>
+          <p class="text-gray-400 text-sm">Orders This Month</p>
+        </div>
+        <div class="stat-card">
+          <div class="flex items-center justify-between mb-3">
+            <div class="icon-box icon-box-sm"><i class="fas fa-ticket"></i></div>
+            <span class="text-red-500 text-sm font-semibold">12 open</span>
+          </div>
+          <h3 class="text-2xl font-display font-bold text-primary">47</h3>
+          <p class="text-gray-400 text-sm">Support Tickets</p>
+        </div>
+      </div>
+
+      <!-- Charts Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        <!-- Revenue Bar Chart -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="font-display font-bold text-lg">Monthly Revenue</h2>
+            <span class="badge badge-accent">2026</span>
+          </div>
+          <div class="canvas-container h-64 sm:h-72 w-full overflow-hidden">
+            <canvas id="revenueChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Demographics Pie Chart -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="font-display font-bold text-lg">Customer Demographics</h2>
+            <span class="badge badge-info">All Time</span>
+          </div>
+          <div class="canvas-container h-64 sm:h-72 w-full overflow-hidden">
+            <canvas id="demographicsChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="font-display font-bold text-lg">Recent Activity</h2>
+          <button class="text-accent text-sm font-semibold hover:underline">View All</button>
+        </div>
+        <div class="space-y-4">
+          <div class="flex items-center gap-4 p-3 rounded-xl bg-secondary-light">
+            <div class="icon-box icon-box-sm bg-green-50 text-green-500"><i class="fas fa-user-plus"></i></div>
+            <div class="flex-1"><h4 class="font-semibold text-sm">New member registration</h4><p class="text-gray-400 text-xs">Sarah J. joined the Barrel Club · 15 min ago</p></div>
+          </div>
+          <div class="flex items-center gap-4 p-3 rounded-xl bg-secondary-light">
+            <div class="icon-box icon-box-sm bg-blue-50 text-blue-500"><i class="fas fa-shopping-bag"></i></div>
+            <div class="flex-1"><h4 class="font-semibold text-sm">Online order placed</h4><p class="text-gray-400 text-xs">Order #1026 — 12 items · $127.50 · 42 min ago</p></div>
+          </div>
+          <div class="flex items-center gap-4 p-3 rounded-xl bg-secondary-light">
+            <div class="icon-box icon-box-sm bg-amber-50 text-amber-500"><i class="fas fa-calendar-check"></i></div>
+            <div class="flex-1"><h4 class="font-semibold text-sm">Event booking confirmed</h4><p class="text-gray-400 text-xs">Corporate event — 50 guests · Apr 25 · 2 hrs ago</p></div>
+          </div>
+          <div class="flex items-center gap-4 p-3 rounded-xl bg-secondary-light">
+            <div class="icon-box icon-box-sm bg-red-50 text-red-500"><i class="fas fa-flag"></i></div>
+            <div class="flex-1"><h4 class="font-semibold text-sm">Support ticket escalated</h4><p class="text-gray-400 text-xs">Ticket #412 requires manager review · 3 hrs ago</p></div>
+          </div>
+          <div class="flex items-center gap-4 p-3 rounded-xl bg-secondary-light">
+            <div class="icon-box icon-box-sm bg-purple-50 text-purple-500"><i class="fas fa-star"></i></div>
+            <div class="flex-1"><h4 class="font-semibold text-sm">New 5-star review</h4><p class="text-gray-400 text-xs">"Best brewery in Portland!" — Mike T. · 5 hrs ago</p></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast-container"></div>
+  <script src="main.js"></script>
+  <script>
+    // Revenue Bar Chart
+    initBarChart('revenueChart',
+      ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      [32000, 28000, 35000, 48290, 0, 0, 0, 0, 0, 0, 0, 0],
+      '#c17817'
+    );
+
+    // Demographics Pie Chart
+    initPieChart('demographicsChart',
+      ['21-30', '31-40', '41-50', '51-60', '60+'],
+      [28, 35, 22, 10, 5],
+      ['#c17817', '#1a1a2e', '#d4922e', '#e8e0d0', '#2d2d44']
+    );
+  </script>
+</body>
+</html>

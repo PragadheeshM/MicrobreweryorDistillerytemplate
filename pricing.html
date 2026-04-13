@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — Copper & Cask</title>
+  <meta name="description" content="Choose the perfect Copper & Cask membership plan. From casual visits to VIP barrel club — find a plan that matches your love for craft." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script><script src="tailwind-config.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+<body class="bg-white font-body">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between nav-inner">
+        <div class="flex items-center gap-10">
+          <a href="index.html" class="flex items-center gap-2.5 group"><div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-accent transition-transform group-hover:rotate-6"><i class="fas fa-whiskey-glass text-white text-lg"></i></div><span class="font-display text-xl font-bold text-white tracking-tight">Copper <span class="text-accent">&</span> Cask</span></a>
+          <div class="hidden xl:flex items-center gap-7">
+            <div class="nav-dropdown relative"><button class="nav-link flex items-center gap-1.5">Home <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button><div class="dropdown-menu"><a href="index.html"><i class="fas fa-gem"></i> Home 1</a><a href="index2.html"><i class="fas fa-fire"></i> Home 2</a></div></div>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="pricing.html" class="nav-link active">Pricing</a>
+            <div class="nav-dropdown relative"><button class="nav-link flex items-center gap-1.5">Blog <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button><div class="dropdown-menu"><a href="blog.html"><i class="fas fa-newspaper"></i> Blog Listing</a><a href="blog-details.html"><i class="fas fa-pen-fancy"></i> Blog Post</a></div></div>
+            <div class="nav-dropdown relative"><button class="nav-link flex items-center gap-1.5">Dashboard <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button><div class="dropdown-menu"><a href="user-dashboard.html"><i class="fas fa-user"></i> User Dashboard</a><a href="admin-dashboard.html"><i class="fas fa-shield-halved"></i> Admin Dashboard</a></div></div>
+            <a href="contact.html" class="nav-link">Contact</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 ml-auto">
+          <div class="hidden md:flex items-center gap-3">
+            <button id="theme-toggle" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-accent/20 text-white/70 hover:text-accent flex items-center justify-center transition-all" title="Toggle Dark / Light Mode">
+              <i class="fas fa-moon theme-icon"></i>
+            </button>
+            <button id="rtl-toggle" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-accent/20 text-white/70 hover:text-accent flex items-center justify-center transition-all" title="Toggle RTL/LTR">
+              <i class="fas fa-globe"></i>
+            </button>
+            <a href="login.html" class="btn-outline text-sm">Login</a>
+            <a href="register.html" class="btn-primary text-sm">Register</a>
+          </div>
+          <!-- Mobile Menu Button -->
+          <div class="flex items-center xl:hidden gap-3">
+            <div class="mobile-toggles md:hidden flex items-center gap-2">
+              <button id="theme-toggle-mobile" class="w-9 h-9 rounded-lg bg-white/10 text-white/70 flex items-center justify-center">
+                <i class="fas fa-moon theme-icon text-sm"></i>
+              </button>
+              <button id="rtl-toggle-mobile" class="w-9 h-9 rounded-lg bg-white/10 text-white/70 flex items-center justify-center" title="Toggle RTL/LTR">
+                <i class="fas fa-globe text-sm"></i>
+              </button>
+            </div>
+            <button id="mobile-menu-btn" class="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center">
+              <i class="fas fa-bars text-lg"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="xl:hidden">
+      <div class="py-2">
+        <button class="mobile-dropdown-trigger">Home <i class="fas fa-chevron-down chevron"></i></button>
+        <div class="mobile-sub-menu"><a href="index.html">Home 1</a><a href="index2.html">Home 2</a></div>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="services.html" class="mobile-link">Services</a>
+        <a href="pricing.html" class="mobile-link active">Pricing</a>
+        <button class="mobile-dropdown-trigger">Blog <i class="fas fa-chevron-down chevron"></i></button>
+        <div class="mobile-sub-menu"><a href="blog.html">Blog Listing</a><a href="blog-details.html">Blog Post</a></div>
+        <button class="mobile-dropdown-trigger">Dashboard <i class="fas fa-chevron-down chevron"></i></button>
+        <div class="mobile-sub-menu"><a href="user-dashboard.html">User Dashboard</a><a href="admin-dashboard.html">Admin Dashboard</a></div>
+        <a href="contact.html" class="mobile-link">Contact</a>
+        <div class="md:hidden flex items-center gap-3 px-4 pt-4 pb-2 border-t border-white/10 mt-2">
+          <a href="login.html" class="btn-outline text-sm flex-1 text-center">Login</a>
+          <a href="register.html" class="btn-primary text-sm flex-1 text-center">Register</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="relative pt-32 pb-20 bg-primary overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-accent/10"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="section-label mx-auto border-accent/30 bg-accent/10 slide-up"><i class="fas fa-tags text-xs"></i> Pricing</div>
+      <h1 class="font-display text-4xl sm:text-5xl font-extrabold text-white mb-4 slide-up" style="transition-delay:.1s">Membership <span class="text-accent">Plans</span></h1>
+      <p class="text-white/50 max-w-xl mx-auto slide-up" style="transition-delay:.2s">Join the Copper & Cask family with a plan that suits your craft lifestyle.</p>
+    </div>
+  </section>
+
+  <!-- PRICING CARDS -->
+  <section class="py-24 bg-white relative overflow-hidden">
+    <div class="blob blob-accent w-72 h-72 top-20 -right-36 opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+        <!-- Casual -->
+        <div class="pricing-card slide-up">
+          <div class="text-center mb-6">
+            <div class="icon-box icon-box-lg mx-auto mb-4"><i class="fas fa-mug-hot"></i></div>
+            <h3 class="font-display text-2xl font-bold mb-1">Casual</h3>
+            <p class="text-gray-400 text-sm">Perfect for occasional visitors</p>
+          </div>
+          <div class="text-center mb-6">
+            <span class="text-4xl font-display font-extrabold text-primary">$0</span>
+            <span class="text-gray-400 text-sm"> / free</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-sm text-gray-600"><i class="fas fa-check text-accent"></i> Walk-in taproom access</li>
+            <li class="flex items-center gap-3 text-sm text-gray-600"><i class="fas fa-check text-accent"></i> Full beer & spirits menu</li>
+            <li class="flex items-center gap-3 text-sm text-gray-600"><i class="fas fa-check text-accent"></i> Online ordering</li>
+            <li class="flex items-center gap-3 text-sm text-gray-400 line-through opacity-60"><i class="fas fa-times text-gray-300"></i> Member discounts</li>
+            <li class="flex items-center gap-3 text-sm text-gray-400 line-through opacity-60"><i class="fas fa-times text-gray-300"></i> Tour discounts</li>
+            <li class="flex items-center gap-3 text-sm text-gray-400 line-through opacity-60"><i class="fas fa-times text-gray-300"></i> Barrel Club events</li>
+          </ul>
+          <button class="btn-outline-dark w-full" onclick="showToast('info','Casual Plan','No sign-up needed — just walk in!')">Get Started</button>
+        </div>
+
+        <!-- Growler Club (Featured) -->
+        <div class="pricing-card featured slide-up" style="transition-delay:.1s">
+          <div class="absolute top-4 right-4 badge bg-accent text-white"><i class="fas fa-star text-xs"></i> Most Popular</div>
+          <div class="text-center mb-6">
+            <div class="w-20 h-20 rounded-2xl bg-accent/20 flex items-center justify-center mx-auto mb-4 text-accent text-3xl"><i class="fas fa-beer-mug-empty"></i></div>
+            <h3 class="font-display text-2xl font-bold mb-1">Growler Club</h3>
+            <p class="text-white/50 text-sm">For the dedicated craft enthusiast</p>
+          </div>
+          <div class="text-center mb-6">
+            <span class="text-4xl font-display font-extrabold">$29</span>
+            <span class="text-white/50 text-sm"> / month</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-sm text-white/80"><i class="fas fa-check text-accent"></i> Everything in Casual</li>
+            <li class="flex items-center gap-3 text-sm text-white/80"><i class="fas fa-check text-accent"></i> 15% off all purchases</li>
+            <li class="flex items-center gap-3 text-sm text-white/80"><i class="fas fa-check text-accent"></i> Monthly growler fill</li>
+            <li class="flex items-center gap-3 text-sm text-white/80"><i class="fas fa-check text-accent"></i> Free tour per quarter</li>
+            <li class="flex items-center gap-3 text-sm text-white/80"><i class="fas fa-check text-accent"></i> Early seasonal access</li>
+            <li class="flex items-center gap-3 text-sm text-white/40 line-through opacity-60"><i class="fas fa-times text-white/30"></i> Barrel Club events</li>
+          </ul>
+          <button class="btn-primary w-full bg-accent hover:bg-accent-light" onclick="showToast('success','Growler Club','Welcome to the club! Mock sign-up successful.')">Join Now</button>
+        </div>
+
+        <!-- Barrel Club -->
+        <div class="pricing-card slide-up" style="transition-delay:.2s">
+          <div class="text-center mb-6">
+            <div class="icon-box icon-box-lg mx-auto mb-4"><i class="fas fa-crown"></i></div>
+            <h3 class="font-display text-2xl font-bold mb-1">Barrel Club</h3>
+            <p class="text-gray-400 text-sm">The ultimate VIP experience</p>
+          </div>
+          <div class="text-center mb-6">
+            <span class="text-4xl font-display font-extrabold text-primary">$79</span>
+            <span class="text-gray-400 text-sm"> / month</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-sm text-gray-600"><i class="fas fa-check text-accent"></i> Everything in Growler</li>
+            <li class="flex items-center gap-3 text-sm text-gray-600"><i class="fas fa-check text-accent"></i> 25% off all purchases</li>
+            <li class="flex items-center gap-3 text-sm text-gray-600"><i class="fas fa-check text-accent"></i> Monthly spirit bottle</li>
+            <li class="flex items-center gap-3 text-sm text-gray-600"><i class="fas fa-check text-accent"></i> Unlimited tours</li>
+            <li class="flex items-center gap-3 text-sm text-gray-600"><i class="fas fa-check text-accent"></i> VIP blending events</li>
+            <li class="flex items-center gap-3 text-sm text-gray-600"><i class="fas fa-check text-accent"></i> Name on a barrel</li>
+          </ul>
+          <button class="btn-accent-outline w-full" onclick="showToast('success','Barrel Club','VIP welcome! Mock sign-up successful.')">Go VIP</button>
+        </div>
+      </div>
+
+      <!-- Comparison Note -->
+      <div class="text-center mt-16 slide-up">
+        <p class="text-gray-400 text-sm">All plans include age verification (21+). Cancel anytime with no fees. <a href="contact.html" class="text-accent hover:underline">Questions? Contact us</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING FAQ -->
+  <section class="py-24 bg-secondary bg-pattern">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 slide-up">
+        <div class="section-label mx-auto"><i class="fas fa-circle-question text-xs"></i> FAQ</div>
+        <h2 class="section-title">Membership <span>Questions</span></h2>
+      </div>
+      <div class="space-y-4 slide-up" style="transition-delay:.1s">
+        <div class="accordion-item active">
+          <button class="accordion-trigger">Can I cancel my membership anytime? <i class="fas fa-chevron-down icon"></i></button>
+          <div class="accordion-content"><p>Yes! All memberships are month-to-month with no contracts. Cancel anytime from your dashboard with zero fees or penalties.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">What happens to my unused benefits? <i class="fas fa-chevron-down icon"></i></button>
+          <div class="accordion-content"><p>Monthly growler fills and tour passes do not roll over. However, your member discounts apply to every purchase for the entire billing period.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">Can I upgrade or downgrade my plan? <i class="fas fa-chevron-down icon"></i></button>
+          <div class="accordion-content"><p>Absolutely. You can switch plans at any time from your member dashboard. Changes take effect on your next billing cycle.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-trigger">Is there a minimum age requirement? <i class="fas fa-chevron-down icon"></i></button>
+          <div class="accordion-content"><p>All membership plans require age verification (21+). ID is required at sign-up and for in-person tastings and purchases.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY JOIN -->
+  <section class="py-20 bg-primary relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-accent/10"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-accent/8 blur-3xl"></div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 slide-up">
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mb-4">Why Join the <span class="text-accent">Club</span>?</h2>
+        <p class="text-white/50 max-w-xl mx-auto">More than just discounts — it's a community of craft lovers who share a passion for quality.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+        <div class="glass rounded-2xl p-5 text-center hover-float">
+          <div class="text-accent text-3xl mb-3"><i class="fas fa-percent"></i></div>
+          <h4 class="font-display font-bold text-white text-sm mb-1">Exclusive Savings</h4>
+          <p class="text-white/40 text-xs">Up to 25% off every purchase, including seasonal releases.</p>
+        </div>
+        <div class="glass rounded-2xl p-5 text-center hover-float">
+          <div class="text-accent text-3xl mb-3"><i class="fas fa-glass-cheers"></i></div>
+          <h4 class="font-display font-bold text-white text-sm mb-1">VIP Events</h4>
+          <p class="text-white/40 text-xs">Members-only blending evenings and early access tastings.</p>
+        </div>
+        <div class="glass rounded-2xl p-5 text-center hover-float">
+          <div class="text-accent text-3xl mb-3"><i class="fas fa-gift"></i></div>
+          <h4 class="font-display font-bold text-white text-sm mb-1">Monthly Perks</h4>
+          <p class="text-white/40 text-xs">Growler fills, spirit bottles, and surprise gift boxes.</p>
+        </div>
+        <div class="glass rounded-2xl p-5 text-center hover-float">
+          <div class="text-accent text-3xl mb-3"><i class="fas fa-users"></i></div>
+          <h4 class="font-display font-bold text-white text-sm mb-1">Community</h4>
+          <p class="text-white/40 text-xs">Join 2,000+ members who share your love for artisan craft.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary-dark text-white pt-20 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-12 mb-16">
+        <!-- Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-2.5 mb-5">
+            <div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center">
+              <i class="fas fa-whiskey-glass text-white text-lg"></i>
+            </div>
+            <span class="font-display text-xl font-bold">Copper <span class="text-accent">&</span> Cask</span>
+          </a>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">Crafted with Passion, Poured with Pride. Premium craft spirits and brews since 2010.</p>
+          <div class="flex gap-3">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-display font-semibold text-lg mb-5">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="about.html" class="text-gray-400 hover:text-accent transition-colors text-sm">About Us</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Our Services</a></li>
+            <li><a href="pricing.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Pricing & Plans</a></li>
+            <li><a href="gallery.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Gallery</a></li>
+            <li><a href="blog.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Blog</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Offerings -->
+        <div>
+          <h4 class="font-display font-semibold text-lg mb-5">Our Offerings</h4>
+          <ul class="space-y-3">
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Craft Beers</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Small Batch Spirits</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Brewery Tours</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Private Events</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Tasting Sessions</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Home Delivery</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="font-display font-semibold text-lg mb-5">Contact Us</h4>
+          <ul class="space-y-4 text-gray-400 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-map-marker-alt text-accent mt-1"></i>
+              <span>123 Barrel Lane,<br>Portland, OR 97201</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-phone text-accent"></i>
+              <span>+1 (503) 555-0149</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-envelope text-accent"></i>
+              <span>hello@copperandcask.com</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fas fa-clock text-accent"></i>
+              <span>Tue–Sun: 12pm – 11pm</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-white/10 pt-8 flex justify-center items-center">
+        <p class="text-gray-500 text-sm">&copy; 2026 Copper & Cask. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast-container"></div>
+  <script src="main.js"></script>
+</body>
+</html>

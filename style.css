@@ -556,7 +556,16 @@ img {
   box-shadow: var(--shadow-md);
   transition: all var(--transition-base);
   border: 1px solid rgba(26, 26, 46, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
+
+.card > a:last-child {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
 
 .card:hover {
   box-shadow: var(--shadow-lg);
@@ -571,7 +580,16 @@ img {
   padding: 2rem;
   box-shadow: var(--shadow-md);
   transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
+
+.card-glass > a:last-child {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
 
 .card-glass:hover {
   background: rgba(255, 255, 255, 0.85);
@@ -895,7 +913,16 @@ img {
   transition: all var(--transition-base);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
+
+.pricing-card > a:last-child,
+.pricing-card > button:last-child {
+  margin-top: auto;
+}
+
 
 .pricing-card::before {
   content: '';
@@ -1034,6 +1061,9 @@ img {
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(26, 26, 46, 0.05);
   transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .stat-card:hover {
@@ -1390,6 +1420,20 @@ img {
   box-shadow: var(--shadow-md);
   transition: all var(--transition-base);
   border: 1px solid rgba(26, 26, 46, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-card .p-6 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card .p-6 > a:last-child {
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 .blog-card:hover {
@@ -1559,6 +1603,11 @@ img {
 [data-theme="dark"] .card-glass {
   background: #1a1a2e;
   border-color: rgba(255,255,255,0.06);
+}
+
+[data-theme="dark"] .glass-light {
+  background: rgba(26, 26, 46, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.1);
 }
 [data-theme="dark"] .card-glass:hover {
   background: rgba(26,26,46,0.9);

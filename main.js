@@ -459,6 +459,9 @@
   window.initDoughnutChart = function (canvasId, labels, data, colors) {
     const ctx = document.getElementById(canvasId);
     if (!ctx) return;
+    
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const textColor = isDark ? 'rgba(255, 255, 255, 0.7)' : '#666';
 
     new Chart(ctx, {
       type: 'doughnut',
@@ -483,6 +486,7 @@
             labels: {
               padding: 20,
               usePointStyle: true,
+              color: textColor,
               font: { family: 'Inter', size: 13 },
             },
           },
@@ -494,6 +498,10 @@
   window.initBarChart = function (canvasId, labels, data, color) {
     const ctx = document.getElementById(canvasId);
     if (!ctx) return;
+
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const textColor = isDark ? 'rgba(255, 255, 255, 0.7)' : '#666';
+    const gridColor = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0,0,0,0.05)';
 
     new Chart(ctx, {
       type: 'bar',
@@ -517,12 +525,18 @@
         scales: {
           y: {
             beginAtZero: true,
-            grid: { color: 'rgba(0,0,0,0.05)' },
-            ticks: { font: { family: 'Inter', size: 12 } },
+            grid: { color: gridColor },
+            ticks: { 
+              color: textColor,
+              font: { family: 'Inter', size: 11 } 
+            },
           },
           x: {
             grid: { display: false },
-            ticks: { font: { family: 'Inter', size: 12 } },
+            ticks: { 
+              color: textColor,
+              font: { family: 'Inter', size: 11 } 
+            },
           },
         },
         plugins: {
@@ -538,6 +552,9 @@
     const ctx = document.getElementById(canvasId);
     if (!ctx) return;
 
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const textColor = isDark ? 'rgba(255, 255, 255, 0.7)' : '#666';
+
     new Chart(ctx, {
       type: 'pie',
       data: {
@@ -547,7 +564,7 @@
             data: data,
             backgroundColor: colors,
             borderWidth: 2,
-            borderColor: '#fff',
+            borderColor: isDark ? '#1a1a2e' : '#fff',
             hoverOffset: 10,
           },
         ],
@@ -561,6 +578,7 @@
             labels: {
               padding: 16,
               usePointStyle: true,
+              color: textColor,
               font: { family: 'Inter', size: 13 },
             },
           },

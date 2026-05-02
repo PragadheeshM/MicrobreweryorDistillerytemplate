@@ -1175,9 +1175,13 @@ img {
   transition: all var(--transition-base);
 }
 
-/* Override hardcoded text-white in auth cards */
-.auth-card .text-white {
+/* Override hardcoded text-white in auth cards — but keep logo icon white */
+.auth-card .text-white:not(.fa-whiskey-glass) {
   color: var(--auth-card-text) !important;
+}
+
+.auth-card .bg-accent .fa-whiskey-glass {
+  color: #ffffff !important;
 }
 
 .auth-card .text-white\/40,

@@ -17,16 +17,28 @@
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between nav-inner">
-        <div class="flex items-center gap-10">
-          <a href="index.html" class="flex items-center gap-2.5 group"><div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-accent transition-transform group-hover:rotate-6"><i class="fas fa-whiskey-glass text-white text-lg"></i></div><span class="font-display text-xl font-bold text-white tracking-tight">Copper <span class="text-accent">&</span> Cask</span></a>
-          <div class="hidden xl:flex items-center gap-7">
-            <div class="nav-dropdown relative"><button class="nav-link flex items-center gap-1.5">Home <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button><div class="dropdown-menu"><a href="index.html"><i class="fas fa-gem"></i> Home 1</a><a href="index2.html"><i class="fas fa-fire"></i> Home 2</a></div></div>
+        <div class="flex items-center gap-8">
+          <a href="index.html" class="flex items-center gap-2.5 group"><div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-accent transition-transform group-hover:rotate-6"><i class="fas fa-whiskey-glass text-white text-lg"></i></div><span class="font-display text-xl font-semibold text-white tracking-tight">Copper <span class="text-accent">&</span> Cask</span></a>
+          <div class="hidden xl:flex items-center gap-8">
+            <div class="nav-dropdown relative">
+              <button class="nav-link flex items-center gap-1.5">Home <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button>
+              <div class="dropdown-menu">
+                <a href="index.html">Home 1</a>
+                <a href="index2.html">Home 2</a>
+              </div>
+            </div>
             <a href="about.html" class="nav-link">About</a>
             <a href="services.html" class="nav-link active">Services</a>
             <a href="pricing.html" class="nav-link">Pricing</a>
-            <div class="nav-dropdown relative"><button class="nav-link flex items-center gap-1.5">Blog <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button><div class="dropdown-menu"><a href="blog.html"><i class="fas fa-newspaper"></i> Blog Listing</a><a href="blog-details.html"><i class="fas fa-pen-fancy"></i> Blog Post</a></div></div>
+            <a href="blog.html" class="nav-link">Blog</a>
             <a href="contact.html" class="nav-link">Contact</a>
-            <div class="nav-dropdown relative"><button class="nav-link flex items-center gap-1.5">Dashboard <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button><div class="dropdown-menu"><a href="user-dashboard.html"><i class="fas fa-user"></i> User Dashboard</a><a href="admin-dashboard.html"><i class="fas fa-shield-halved"></i> Admin Dashboard</a></div></div>
+            <div class="nav-dropdown relative">
+              <button class="nav-link flex items-center gap-1.5">Dashboard <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button>
+              <div class="dropdown-menu">
+                <a href="user-dashboard.html">User Dashboard</a>
+                <a href="admin-dashboard.html">Admin Dashboard</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="flex items-center gap-3 ml-auto">
@@ -34,8 +46,8 @@
             <button id="theme-toggle" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-accent/20 text-white/70 hover:text-accent flex items-center justify-center transition-all" title="Toggle Dark / Light Mode">
               <i class="fas fa-moon theme-icon"></i>
             </button>
-            <button id="rtl-toggle" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-accent/20 text-white/70 hover:text-accent flex items-center justify-center transition-all" title="Toggle RTL/LTR">
-              <i class="fas fa-globe"></i>
+            <button id="rtl-toggle" class="px-3 h-10 rounded-xl bg-white/10 hover:bg-accent/20 text-white/70 hover:text-accent flex items-center justify-center transition-all font-semibold text-xs" title="Toggle RTL/LTR">
+              RTL
             </button>
             <a href="login.html" class="btn-outline text-sm">Login</a>
             <a href="register.html" class="btn-primary text-sm">Register</a>
@@ -46,8 +58,8 @@
               <button id="theme-toggle-mobile" class="w-9 h-9 rounded-lg bg-white/10 text-white/70 flex items-center justify-center">
                 <i class="fas fa-moon theme-icon text-sm"></i>
               </button>
-              <button id="rtl-toggle-mobile" class="w-9 h-9 rounded-lg bg-white/10 text-white/70 flex items-center justify-center" title="Toggle RTL/LTR">
-                <i class="fas fa-globe text-sm"></i>
+              <button id="rtl-toggle-mobile" class="px-2 h-9 rounded-lg bg-white/10 text-white/70 flex items-center justify-center font-semibold text-[10px]" title="Toggle RTL/LTR">
+                RTL
               </button>
             </div>
             <button id="mobile-menu-btn" class="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center">
@@ -64,8 +76,7 @@
         <a href="about.html" class="mobile-link">About</a>
         <a href="services.html" class="mobile-link active">Services</a>
         <a href="pricing.html" class="mobile-link">Pricing</a>
-        <button class="mobile-dropdown-trigger">Blog <i class="fas fa-chevron-down chevron"></i></button>
-        <div class="mobile-sub-menu"><a href="blog.html">Blog Listing</a><a href="blog-details.html">Blog Post</a></div>
+        <a href="blog.html" class="mobile-link">Blog</a>
         <a href="contact.html" class="mobile-link">Contact</a>
         <button class="mobile-dropdown-trigger">Dashboard <i class="fas fa-chevron-down chevron"></i></button>
         <div class="mobile-sub-menu"><a href="user-dashboard.html">User Dashboard</a><a href="admin-dashboard.html">Admin Dashboard</a></div>
@@ -78,12 +89,12 @@
   </nav>
 
   <!-- PAGE HEADER -->
-  <section class="relative pt-32 pb-20 bg-primary overflow-hidden">
+  <section class="relative py-24 bg-primary overflow-hidden">
     <div class="absolute inset-0"><img src="https://images.unsplash.com/photo-1584225064785-c62a8b43d148?w=1920&q=80&fit=crop" alt="Brewing" class="w-full h-full object-cover opacity-20" /></div>
     <div class="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary"></div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div class="section-label mx-auto border-accent/30 bg-accent/10 slide-up"><i class="fas fa-concierge-bell text-xs"></i> Our Services</div>
-      <h1 class="font-display text-4xl sm:text-5xl font-extrabold text-white mb-4 slide-up" style="transition-delay:.1s">What We <span class="text-accent">Offer</span></h1>
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white mb-4 slide-up" style="transition-delay:.1s">What We <span class="text-accent">Offer</span></h1>
       <p class="text-white/50 max-w-xl mx-auto slide-up" style="transition-delay:.2s">From grain to glass — explore the complete Copper & Cask experience.</p>
     </div>
   </section>
@@ -96,7 +107,7 @@
         <div class="card hover-float hover-glow group slide-up">
           <div class="rounded-xl overflow-hidden mb-5"><img src="https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=500&q=80&fit=crop" alt="Craft Beers" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" /></div>
           <div class="icon-box mb-4"><i class="fas fa-beer-mug-empty"></i></div>
-          <h3 class="font-display text-xl font-bold mb-3 group-hover:text-accent transition-colors">Craft Beers</h3>
+          <h3 class="font-display text-xl font-semibold mb-3 group-hover:text-accent transition-colors">Craft Beers</h3>
           <p class="text-gray-500 text-sm mb-4">Over 50 unique recipes — from citrusy IPAs and smooth stouts to refreshing wheat ales and seasonal specials. Each beer is brewed in copper kettles using organic ingredients.</p>
           <ul class="space-y-2 mb-5">
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Indian Pale Ales (IPA)</li>
@@ -104,14 +115,16 @@
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Wheat & Sour Ales</li>
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Seasonal & Limited Releases</li>
           </ul>
-          <a href="service-details.html" class="text-accent font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">View Details <i class="fas fa-arrow-right text-xs"></i></a>
+          <div class="flex justify-center mt-6">
+            <a href="service-details.html" class="btn-primary w-full text-center">View Details</a>
+          </div>
         </div>
 
         <!-- Small Batch Spirits -->
         <div class="card hover-float hover-glow group slide-up" style="transition-delay:.1s">
           <div class="rounded-xl overflow-hidden mb-5"><img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=500&q=80&fit=crop" alt="Spirits" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" /></div>
           <div class="icon-box mb-4"><i class="fas fa-wine-bottle"></i></div>
-          <h3 class="font-display text-xl font-bold mb-3 group-hover:text-accent transition-colors">Small Batch Spirits</h3>
+          <h3 class="font-display text-xl font-semibold mb-3 group-hover:text-accent transition-colors">Small Batch Spirits</h3>
           <p class="text-gray-500 text-sm mb-4">Premium whiskey, gin, and vodka distilled with precision in our copper pot stills. Aged in charred American oak barrels for depth and character.</p>
           <ul class="space-y-2 mb-5">
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Single Malt Whiskey</li>
@@ -119,14 +132,16 @@
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Copper-Pot Vodka</li>
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Barrel-Aged Rum</li>
           </ul>
-          <a href="service-details.html" class="text-accent font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">View Details <i class="fas fa-arrow-right text-xs"></i></a>
+          <div class="flex justify-center mt-6">
+            <a href="service-details.html" class="btn-primary w-full text-center">View Details</a>
+          </div>
         </div>
 
         <!-- Brewery Tours -->
         <div class="card hover-float hover-glow group slide-up" style="transition-delay:.2s">
           <div class="rounded-xl overflow-hidden mb-5"><img src="https://images.unsplash.com/photo-1559526642-c3f001ea68ee?w=500&q=80&fit=crop" alt="Tour" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" /></div>
           <div class="icon-box mb-4"><i class="fas fa-map-location-dot"></i></div>
-          <h3 class="font-display text-xl font-bold mb-3 group-hover:text-accent transition-colors">Brewery Tours</h3>
+          <h3 class="font-display text-xl font-semibold mb-3 group-hover:text-accent transition-colors">Brewery Tours</h3>
           <p class="text-gray-500 text-sm mb-4">Step behind the scenes and witness our entire process — from mashing and fermenting to distilling and bottling. Includes a guided tasting flight.</p>
           <ul class="space-y-2 mb-5">
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> 90-Minute Guided Tour</li>
@@ -134,14 +149,16 @@
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Group Discounts Available</li>
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Weekends at 2pm & 5pm</li>
           </ul>
-          <a href="service-details.html" class="text-accent font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">View Details <i class="fas fa-arrow-right text-xs"></i></a>
+          <div class="flex justify-center mt-6">
+            <a href="service-details.html" class="btn-primary w-full text-center">View Details</a>
+          </div>
         </div>
 
         <!-- Private Events -->
         <div class="card hover-float hover-glow group slide-up">
           <div class="rounded-xl overflow-hidden mb-5"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=500&q=80&fit=crop" alt="Events" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" /></div>
           <div class="icon-box mb-4"><i class="fas fa-champagne-glasses"></i></div>
-          <h3 class="font-display text-xl font-bold mb-3 group-hover:text-accent transition-colors">Private Events</h3>
+          <h3 class="font-display text-xl font-semibold mb-3 group-hover:text-accent transition-colors">Private Events</h3>
           <p class="text-gray-500 text-sm mb-4">Host your birthday, corporate event, or wedding reception in our rustic venue. Custom beer menus, live music, and a dedicated event coordinator.</p>
           <ul class="space-y-2 mb-5">
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Up to 200 Guests</li>
@@ -149,14 +166,16 @@
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Live Music Options</li>
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Indoor & Outdoor Spaces</li>
           </ul>
-          <a href="service-details.html" class="text-accent font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">View Details <i class="fas fa-arrow-right text-xs"></i></a>
+          <div class="flex justify-center mt-6">
+            <a href="service-details.html" class="btn-primary w-full text-center">View Details</a>
+          </div>
         </div>
 
         <!-- Tasting Sessions -->
         <div class="card hover-float hover-glow group slide-up" style="transition-delay:.1s">
           <div class="rounded-xl overflow-hidden mb-5"><img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=500&q=80&fit=crop" alt="Tasting" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" /></div>
           <div class="icon-box mb-4"><i class="fas fa-glass-water-droplet"></i></div>
-          <h3 class="font-display text-xl font-bold mb-3 group-hover:text-accent transition-colors">Tasting Sessions</h3>
+          <h3 class="font-display text-xl font-semibold mb-3 group-hover:text-accent transition-colors">Tasting Sessions</h3>
           <p class="text-gray-500 text-sm mb-4">Curated flights guided by our brewmasters. Learn to identify flavor profiles, understand hops bitterness, and discover your perfect beer or spirit match.</p>
           <ul class="space-y-2 mb-5">
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Expert-Led Tastings</li>
@@ -164,14 +183,16 @@
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Food Pairing Add-On</li>
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Weekly on Thursdays</li>
           </ul>
-          <a href="service-details.html" class="text-accent font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">View Details <i class="fas fa-arrow-right text-xs"></i></a>
+          <div class="flex justify-center mt-6">
+            <a href="service-details.html" class="btn-primary w-full text-center">View Details</a>
+          </div>
         </div>
 
         <!-- Home Delivery -->
         <div class="card hover-float hover-glow group slide-up" style="transition-delay:.2s">
           <div class="rounded-xl overflow-hidden mb-5"><img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?w=500&q=80&fit=crop" alt="Delivery" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" /></div>
           <div class="icon-box mb-4"><i class="fas fa-truck-fast"></i></div>
-          <h3 class="font-display text-xl font-bold mb-3 group-hover:text-accent transition-colors">Home Delivery</h3>
+          <h3 class="font-display text-xl font-semibold mb-3 group-hover:text-accent transition-colors">Home Delivery</h3>
           <p class="text-gray-500 text-sm mb-4">Get your favourite craft beverages delivered in temperature-controlled packaging right to your doorstep. Available across the Pacific Northwest.</p>
           <ul class="space-y-2 mb-5">
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Same-Day Local Delivery</li>
@@ -179,14 +200,43 @@
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Gift Packaging Available</li>
             <li class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-check-circle text-accent text-xs"></i> Free Shipping Over $75</li>
           </ul>
-          <a href="service-details.html" class="text-accent font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">View Details <i class="fas fa-arrow-right text-xs"></i></a>
+          <div class="flex justify-center mt-6">
+            <a href="service-details.html" class="btn-primary w-full text-center">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- OUR CRAFTING PROCESS -->
+  <section class="py-24 bg-secondary relative overflow-hidden bg-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="slide-left">
+          <div class="section-label mb-6"><i class="fas fa-microchip text-xs"></i> Modern Craft</div>
+          <h2 class="section-title">The Art of <span>Precision</span></h2>
+          <p class="text-gray-600 mb-6">Our process blends time-honored traditions with state-of-the-art technology. From temperature-controlled fermentation to precision distillation, every step is monitored to ensure absolute quality.</p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-4 bg-white rounded-2xl border border-gray-100 shadow-sm">
+              <div class="text-accent text-xl mb-1"><i class="fas fa-temperature-half"></i></div>
+              <div class="font-semibold text-sm">Thermal Control</div>
+            </div>
+            <div class="p-4 bg-white rounded-2xl border border-gray-100 shadow-sm">
+              <div class="text-accent text-xl mb-1"><i class="fas fa-flask-vial"></i></div>
+              <div class="font-semibold text-sm">Lab Tested</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-right">
+          <div class="rounded-3xl overflow-hidden shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1584225064785-c62a8b43d148?w=600&q=80&fit=crop" alt="Precision brewing" class="w-full h-80 object-cover" />
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ ACCORDION -->
-  <section class="py-24 bg-secondary bg-pattern">
+  <section class="py-24 bg-white bg-pattern relative overflow-hidden">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12 slide-up">
         <div class="section-label mx-auto"><i class="fas fa-circle-question text-xs"></i> FAQ</div>
@@ -217,13 +267,27 @@
       </div>
     </div>
   </section>
+  <!-- SOURCING PARTNERSHIPS -->
+  <section class="py-24 bg-secondary bg-pattern overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <div class="section-label mx-auto mb-6">Our Partners</div>
+      <h2 class="section-title">Rooted in <span>Community</span></h2>
+      <p class="text-gray-500 max-w-2xl mx-auto mb-12">We source 100% of our grains and botanicals from independent local farms that share our commitment to sustainability.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-40 grayscale hover:grayscale-0 transition-all">
+        <div class="flex items-center justify-center font-display font-bold text-xl">VALLEY GRAINS</div>
+        <div class="flex items-center justify-center font-display font-bold text-xl">OAK & IRON</div>
+        <div class="flex items-center justify-center font-display font-bold text-xl">PURE SPRING</div>
+        <div class="flex items-center justify-center font-display font-bold text-xl">GREEN HOPS</div>
+      </div>
+    </div>
+  </section>
 
   <!-- CTA BANNER -->
   <section class="relative py-20 overflow-hidden">
     <div class="absolute inset-0"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1920&q=80&fit=crop" alt="Taproom" class="w-full h-full object-cover" /></div>
     <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-accent/30"></div>
     <div class="relative z-10 max-w-4xl mx-auto px-4 text-center slide-up">
-      <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mb-4">Ready to Experience Our <span class="text-accent">Craft</span>?</h2>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white mb-4">Ready to Experience Our <span class="text-accent">Craft</span>?</h2>
       <p class="text-white/60 text-lg mb-8 max-w-2xl mx-auto">Book a tour, reserve a tasting, or simply walk into our taproom. Your next great pour is waiting.</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="pricing.html" class="btn-primary text-base px-8 py-4"><i class="fas fa-ticket"></i> View Membership Plans</a>
@@ -233,55 +297,55 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-primary-dark text-white pt-20 pb-8">
+  <footer class="bg-primary-dark text-white pt-20 pb-8 border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-12 mb-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 mb-16">
         <!-- Brand -->
         <div>
-          <a href="index.html" class="flex items-center gap-2.5 mb-5">
-            <div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center">
+          <a href="index.html" class="flex items-center gap-2.5 group mb-5">
+            <div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-accent transition-transform group-hover:rotate-6">
               <i class="fas fa-whiskey-glass text-white text-lg"></i>
             </div>
-            <span class="font-display text-xl font-bold">Copper <span class="text-accent">&</span> Cask</span>
+            <span class="font-display text-xl font-semibold text-white tracking-tight">Copper <span class="text-accent">&</span> Cask</span>
           </a>
           <p class="text-gray-400 text-sm mb-6 leading-relaxed">Crafted with Passion, Poured with Pride. Premium craft spirits and brews since 2010.</p>
           <div class="flex gap-3">
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
 
         <!-- Quick Links -->
         <div>
-          <h4 class="font-display font-semibold text-lg mb-5">Quick Links</h4>
+          <h3 class="font-display font-semibold text-lg mb-5">Quick Links</h3>
           <ul class="space-y-3">
-            <li><a href="about.html" class="text-gray-400 hover:text-accent transition-colors text-sm">About Us</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Our Services</a></li>
-            <li><a href="pricing.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Pricing & Plans</a></li>
-            <li><a href="gallery.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Gallery</a></li>
-            <li><a href="blog.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Blog</a></li>
-            <li><a href="contact.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Contact</a></li>
+            <li><a href="about.html" class="text-gray-400 footer-link text-sm">About Us</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Our Services</a></li>
+            <li><a href="pricing.html" class="text-gray-400 footer-link text-sm">Pricing & Plans</a></li>
+            <li><a href="gallery.html" class="text-gray-400 footer-link text-sm">Gallery</a></li>
+            <li><a href="blog.html" class="text-gray-400 footer-link text-sm">Blog</a></li>
+            <li><a href="contact.html" class="text-gray-400 footer-link text-sm">Contact</a></li>
           </ul>
         </div>
 
         <!-- Our Offerings -->
         <div>
-          <h4 class="font-display font-semibold text-lg mb-5">Our Offerings</h4>
+          <h3 class="font-display font-semibold text-lg mb-5">Our Offerings</h3>
           <ul class="space-y-3">
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Craft Beers</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Small Batch Spirits</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Brewery Tours</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Private Events</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Tasting Sessions</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Home Delivery</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Craft Beers</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Small Batch Spirits</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Brewery Tours</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Private Events</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Tasting Sessions</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Home Delivery</a></li>
           </ul>
         </div>
 
         <!-- Contact Info -->
         <div>
-          <h4 class="font-display font-semibold text-lg mb-5">Contact Us</h4>
+          <h3 class="font-display font-semibold text-lg mb-5">Contact Us</h3>
           <ul class="space-y-4 text-gray-400 text-sm">
             <li class="flex items-start gap-3">
               <i class="fas fa-map-marker-alt text-accent mt-1"></i>

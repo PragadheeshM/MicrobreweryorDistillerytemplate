@@ -57,7 +57,7 @@
 
     // Close sidebar when clicking outside on mobile
     document.addEventListener('click', (e) => {
-      if (window.innerWidth < 1024 && sidebar.classList.contains('open') && !sidebar.contains(e.target) && e.target !== sidebarToggle) {
+      if (window.innerWidth < 1280 && sidebar.classList.contains('open') && !sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
         sidebar.classList.remove('open');
         const icon = sidebarToggle.querySelector('i');
         if (icon) {
@@ -203,14 +203,30 @@
   const rtlToggle = document.getElementById('rtl-toggle');
   const rtlToggleMobile = document.getElementById('rtl-toggle-mobile');
 
+  function updateRTLText(isRTL) {
+    const text = isRTL ? 'LTR' : 'RTL';
+    if (rtlToggle) rtlToggle.textContent = text;
+    if (rtlToggleMobile) rtlToggleMobile.textContent = text;
+  }
+
   function toggleRTL() {
     const html = document.documentElement;
     const isRTL = html.getAttribute('dir') === 'rtl';
-    html.setAttribute('dir', isRTL ? 'ltr' : 'rtl');
+    const newDir = isRTL ? 'ltr' : 'rtl';
+    html.setAttribute('dir', newDir);
+    updateRTLText(newDir === 'rtl');
   }
 
-  if (rtlToggle) rtlToggle.addEventListener('click', toggleRTL);
-  if (rtlToggleMobile) rtlToggleMobile.addEventListener('click', toggleRTL);
+  if (rtlToggle) {
+    rtlToggle.addEventListener('click', toggleRTL);
+    // Initial text (Show 'RTL' if currently 'ltr')
+    rtlToggle.textContent = document.documentElement.getAttribute('dir') === 'rtl' ? 'LTR' : 'RTL';
+  }
+  if (rtlToggleMobile) {
+    rtlToggleMobile.addEventListener('click', toggleRTL);
+    // Initial text (Show 'RTL' if currently 'ltr')
+    rtlToggleMobile.textContent = document.documentElement.getAttribute('dir') === 'rtl' ? 'LTR' : 'RTL';
+  }
 
   // ── Dark / Light Mode Toggle ─────────────────────────────
   function getTheme() {
@@ -629,4 +645,17 @@
       }
     }
   });
+  // ── Blog Card Clickable ──────────────────────────────────
+  document.querySelectorAll('.blog-card').forEach((card) => {
+    card.addEventListener('click', (e) => {
+      // Don't trigger if a link inside was clicked directly
+      if (e.target.closest('a')) return;
+      
+      const link = card.querySelector('h3 a') || card.querySelector('a');
+      if (link) {
+        window.location.href = link.getAttribute('href');
+      }
+    });
+  });
+
 })();

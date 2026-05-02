@@ -5,64 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Copper & Cask — Modern Craft Experience</title>
   <meta name="description" content="Discover the modern side of craft brewing and distilling at Copper & Cask. Vibrant flavors, immersive experiences, and a community that celebrates the art." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="tailwind-config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script><script src="tailwind-config.js"></script>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 </head>
 <body class="bg-white font-body">
 
-  <!-- ══ NAVBAR (Same as index.html) ══════════════════════ -->
+  <!-- NAVBAR -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between nav-inner">
         <div class="flex items-center gap-10">
-          <a href="index.html" class="flex items-center gap-2.5 group">
-            <div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-accent transition-transform group-hover:rotate-6">
-              <i class="fas fa-whiskey-glass text-white text-lg"></i>
-            </div>
-            <span class="font-display text-xl font-bold text-white tracking-tight">Copper <span class="text-accent">&</span> Cask</span>
-          </a>
-          <div class="hidden xl:flex items-center gap-7">
+          <a href="index.html" class="flex items-center gap-2.5 group"><div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-accent transition-transform group-hover:rotate-6"><i class="fas fa-whiskey-glass text-white text-lg"></i></div><span class="font-display text-xl font-semibold text-white tracking-tight">Copper <span class="text-accent">&</span> Cask</span></a>
+          <div class="hidden xl:flex items-center gap-8">
             <div class="nav-dropdown relative">
               <button class="nav-link flex items-center gap-1.5">Home <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button>
               <div class="dropdown-menu">
-                <a href="index.html"><i class="fas fa-gem"></i> Home 1</a>
-                <a href="index2.html"><i class="fas fa-fire"></i> Home 2</a>
+                <a href="index.html">Home 1</a>
+                <a href="index2.html">Home 2</a>
               </div>
             </div>
             <a href="about.html" class="nav-link">About</a>
             <a href="services.html" class="nav-link">Services</a>
             <a href="pricing.html" class="nav-link">Pricing</a>
-            <div class="nav-dropdown relative">
-              <button class="nav-link flex items-center gap-1.5">Blog <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button>
-              <div class="dropdown-menu">
-                <a href="blog.html"><i class="fas fa-newspaper"></i> Blog Listing</a>
-                <a href="blog-details.html"><i class="fas fa-pen-fancy"></i> Blog Post</a>
-              </div>
-            </div>
+            <a href="blog.html" class="nav-link">Blog</a>
             <a href="contact.html" class="nav-link">Contact</a>
             <div class="nav-dropdown relative">
               <button class="nav-link flex items-center gap-1.5">Dashboard <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button>
               <div class="dropdown-menu">
-                <a href="user-dashboard.html"><i class="fas fa-user"></i> User Dashboard</a>
-                <a href="admin-dashboard.html"><i class="fas fa-shield-halved"></i> Admin Dashboard</a>
+                <a href="user-dashboard.html">User Dashboard</a>
+                <a href="admin-dashboard.html">Admin Dashboard</a>
               </div>
             </div>
           </div>
         </div>
-        <!-- Actions -->
         <div class="flex items-center gap-3 ml-auto">
           <div class="hidden md:flex items-center gap-3">
             <button id="theme-toggle" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-accent/20 text-white/70 hover:text-accent flex items-center justify-center transition-all" title="Toggle Dark / Light Mode">
               <i class="fas fa-moon theme-icon"></i>
             </button>
-            <button id="rtl-toggle" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-accent/20 text-white/70 hover:text-accent flex items-center justify-center transition-all" title="Toggle RTL/LTR">
-              <i class="fas fa-globe"></i>
+            <button id="rtl-toggle" class="px-3 h-10 rounded-xl bg-white/10 hover:bg-accent/20 text-white/70 hover:text-accent flex items-center justify-center transition-all font-semibold text-xs" title="Toggle RTL/LTR">
+              RTL
             </button>
             <a href="login.html" class="btn-outline text-sm">Login</a>
             <a href="register.html" class="btn-primary text-sm">Register</a>
@@ -73,8 +58,8 @@
               <button id="theme-toggle-mobile" class="w-9 h-9 rounded-lg bg-white/10 text-white/70 flex items-center justify-center">
                 <i class="fas fa-moon theme-icon text-sm"></i>
               </button>
-              <button id="rtl-toggle-mobile" class="w-9 h-9 rounded-lg bg-white/10 text-white/70 flex items-center justify-center" title="Toggle RTL/LTR">
-                <i class="fas fa-globe text-sm"></i>
+              <button id="rtl-toggle-mobile" class="px-2 h-9 rounded-lg bg-white/10 text-white/70 flex items-center justify-center font-semibold text-[10px]" title="Toggle RTL/LTR">
+                RTL
               </button>
             </div>
             <button id="mobile-menu-btn" class="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center">
@@ -91,8 +76,7 @@
         <a href="about.html" class="mobile-link">About</a>
         <a href="services.html" class="mobile-link">Services</a>
         <a href="pricing.html" class="mobile-link">Pricing</a>
-        <button class="mobile-dropdown-trigger">Blog <i class="fas fa-chevron-down chevron"></i></button>
-        <div class="mobile-sub-menu"><a href="blog.html">Blog Listing</a><a href="blog-details.html">Blog Post</a></div>
+        <a href="blog.html" class="mobile-link">Blog</a>
         <a href="contact.html" class="mobile-link">Contact</a>
         <button class="mobile-dropdown-trigger">Dashboard <i class="fas fa-chevron-down chevron"></i></button>
         <div class="mobile-sub-menu"><a href="user-dashboard.html">User Dashboard</a><a href="admin-dashboard.html">Admin Dashboard</a></div>
@@ -104,419 +88,149 @@
     </div>
   </nav>
 
-  <!-- ══ HERO — Full-Screen Vibrant Imagery ════════════════ -->
-  <section class="hero-section relative min-h-screen flex items-center overflow-hidden">
-    <!-- Background Video / Image -->
-    <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1920&q=80&fit=crop" alt="Modern taproom interior" class="w-full h-full object-cover" />
-    </div>
-    <div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/70 to-transparent"></div>
-
-    <!-- Floating Elements -->
-    <div class="absolute top-1/3 right-[10%] w-80 h-80 rounded-full border border-accent/20 animate-float hidden lg:block"></div>
-    <div class="absolute bottom-1/4 right-[25%] w-40 h-40 rounded-full bg-accent/10 blur-2xl animate-float-slow hidden lg:block"></div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-32">
-      <div class="max-w-2xl">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-white/80 text-sm mb-6 slide-up">
-          <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-          Now Open — Weekend Tasting Events
-        </div>
-
-        <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] mb-6 slide-up" style="transition-delay: 0.1s;">
-          Where Every <br />Sip Tells a <br /><span class="text-gradient">Story</span>
-        </h1>
-
-        <p class="text-xl text-white/55 mb-10 max-w-lg slide-up" style="transition-delay: 0.2s;">
-          Step into a world of handcrafted beer and artisan spirits. At Copper & Cask, every pour carries the soul of our craft.
-        </p>
-
-        <div class="flex flex-wrap gap-4 mb-12 slide-up" style="transition-delay: 0.3s;">
-          <a href="services.html" class="btn-primary text-base px-8 py-4">
-            <i class="fas fa-glass-water-droplet"></i> Start a Tasting
-          </a>
-          <a href="gallery.html" class="btn-outline text-base px-8 py-4">
-            <i class="fas fa-images"></i> View Gallery
-          </a>
-        </div>
-
-        <!-- Trust Badges -->
-        <div class="flex flex-wrap items-center gap-6 slide-up" style="transition-delay: 0.4s;">
-          <div class="flex items-center gap-2 text-white/50 text-sm">
-            <i class="fas fa-award text-accent"></i> 30+ Awards
-          </div>
-          <div class="flex items-center gap-2 text-white/50 text-sm">
-            <i class="fas fa-users text-accent"></i> 10K+ Patrons
-          </div>
-          <div class="flex items-center gap-2 text-white/50 text-sm">
-            <i class="fas fa-star text-accent"></i> 4.9 Rating
-          </div>
-        </div>
+  <!-- HERO (Section 1) -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden py-32 text-center">
+    <div class="absolute inset-0"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1920&q=80&fit=crop" alt="Taproom" class="w-full h-full object-cover" /></div>
+    <div class="absolute inset-0 bg-primary/80"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 w-full">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/10 text-white/80 text-sm mb-8 slide-up">
+        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span> Now Open — Weekend Tasting Events
+      </div>
+      <h1 class="font-display text-5xl sm:text-7xl font-semibold text-white leading-tight mb-8 slide-up" style="transition-delay: 0.1s;">Where Every Sip Tells a <span class="text-accent">Story</span></h1>
+      <p class="text-xl text-white/55 mb-10 max-w-2xl mx-auto slide-up" style="transition-delay: 0.2s;">Step into a world of handcrafted beer and artisan spirits. At Copper & Cask, every pour carries the soul of our craft.</p>
+      <div class="flex flex-wrap justify-center gap-4 slide-up" style="transition-delay: 0.3s;">
+        <a href="services.html" class="btn-primary px-8 py-4">Start a Tasting</a>
+        <a href="gallery.html" class="btn-outline px-8 py-4 text-white">View Gallery</a>
       </div>
     </div>
   </section>
 
-  <!-- ══ FEATURED CRAFT / WHY SECTION ══════════════════════ -->
+  <!-- FEATURED CRAFT (Section 2) -->
   <section class="py-24 bg-white relative overflow-hidden">
-    <div class="blob blob-accent w-96 h-96 top-0 left-[-10%] opacity-5"></div>
-
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 slide-up">
-        <div class="section-label mx-auto"><i class="fas fa-heart text-xs"></i> Why Copper & Cask</div>
+        <div class="section-label mx-auto">Modern Craft</div>
         <h2 class="section-title">The Art Behind <span>the Pour</span></h2>
-        <p class="section-subtitle mx-auto">Every batch is born from passion, patience, and the finest locally sourced ingredients.</p>
       </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
-        <div class="text-center p-6 rounded-2xl hover-float group">
-          <div class="icon-box icon-box-lg mx-auto mb-5"><i class="fas fa-seedling"></i></div>
-          <h3 class="font-display font-bold text-lg mb-2 group-hover:text-accent transition-colors">Local Ingredients</h3>
-          <p class="text-gray-500 text-sm">We source 90% of our ingredients from farms within 50 miles of our brewery.</p>
-        </div>
-        <div class="text-center p-6 rounded-2xl hover-float group">
-          <div class="icon-box icon-box-lg mx-auto mb-5"><i class="fas fa-temperature-low"></i></div>
-          <h3 class="font-display font-bold text-lg mb-2 group-hover:text-accent transition-colors">Slow Fermentation</h3>
-          <p class="text-gray-500 text-sm">Our cold-fermentation process takes weeks longer than industry standard for richer flavors.</p>
-        </div>
-        <div class="text-center p-6 rounded-2xl hover-float group">
-          <div class="icon-box icon-box-lg mx-auto mb-5"><i class="fas fa-fire-burner"></i></div>
-          <h3 class="font-display font-bold text-lg mb-2 group-hover:text-accent transition-colors">Copper Distilled</h3>
-          <p class="text-gray-500 text-sm">Traditional copper pot stills allow for maximum control and a signature smoothness.</p>
-        </div>
-        <div class="text-center p-6 rounded-2xl hover-float group">
-          <div class="icon-box icon-box-lg mx-auto mb-5"><i class="fas fa-people-group"></i></div>
-          <h3 class="font-display font-bold text-lg mb-2 group-hover:text-accent transition-colors">Community First</h3>
-          <p class="text-gray-500 text-sm">More than a brewery — we're a gathering place for craft lovers and neighbors.</p>
-        </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center p-6"><div class="icon-box mx-auto mb-4"><i class="fas fa-seedling"></i></div><h3 class="font-display font-semibold text-lg mb-2">Local Sourcing</h3><p class="text-gray-500 text-sm">90% of our ingredients come from local farms.</p></div>
+        <div class="text-center p-6"><div class="icon-box mx-auto mb-4"><i class="fas fa-temperature-low"></i></div><h3 class="font-display font-semibold text-lg mb-2">Slow Process</h3><p class="text-gray-500 text-sm">Patient fermentation for richer, deeper flavors.</p></div>
+        <div class="text-center p-6"><div class="icon-box mx-auto mb-4"><i class="fas fa-fire-burner"></i></div><h3 class="font-display font-semibold text-lg mb-2">Copper Stills</h3><p class="text-gray-500 text-sm">Signature smoothness through traditional distillation.</p></div>
+        <div class="text-center p-6"><div class="icon-box mx-auto mb-4"><i class="fas fa-people-group"></i></div><h3 class="font-display font-semibold text-lg mb-2">Community Hub</h3><p class="text-gray-500 text-sm">A gathering place for craft lovers and friends.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ══ SPLIT IMAGE + TEXT ════════════════════════════════ -->
-  <section class="py-24 bg-secondary relative overflow-hidden bg-pattern">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- EXPERIENCE (Section 3) -->
+  <section class="py-24 bg-secondary bg-pattern">
+    <div class="max-w-7xl mx-auto px-4">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
         <div class="slide-left">
-          <div class="section-label"><i class="fas fa-route text-xs"></i> Plan Your Visit</div>
           <h2 class="section-title">An Experience <span>Worth Savoring</span></h2>
-          <p class="section-subtitle mb-8">Whether you're a seasoned craft aficionado or just beginning your journey, our taproom welcomes everyone with open doors and full glasses.</p>
-
-          <div class="space-y-5 mb-8">
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 text-accent">
-                <i class="fas fa-clock"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold mb-1">Open 6 Days a Week</h4>
-                <p class="text-gray-500 text-sm">Tuesday through Sunday, 12 PM to 11 PM. Closed Mondays.</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 text-accent">
-                <i class="fas fa-utensils"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold mb-1">Food Pairings Available</h4>
-                <p class="text-gray-500 text-sm">Chef-curated small plates designed to complement our brews and spirits.</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 text-accent">
-                <i class="fas fa-music"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold mb-1">Live Music Fridays</h4>
-                <p class="text-gray-500 text-sm">Enjoy live acoustic sets from local artists every Friday evening.</p>
-              </div>
-            </div>
-          </div>
-
-          <a href="contact.html" class="btn-primary"><i class="fas fa-calendar-check"></i> Book a Visit</a>
+          <p class="text-gray-600 mb-8">Whether you're a seasoned craft aficionado or just beginning your journey, our taproom welcomes everyone with open doors.</p>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3 text-gray-700 font-semibold"><i class="fas fa-check-circle text-accent"></i> Open 6 Days a Week</li>
+            <li class="flex items-center gap-3 text-gray-700 font-semibold"><i class="fas fa-check-circle text-accent"></i> Food Pairings Available</li>
+            <li class="flex items-center gap-3 text-gray-700 font-semibold"><i class="fas fa-check-circle text-accent"></i> Live Music Fridays</li>
+          </ul>
+          <a href="contact.html" class="btn-primary">Book a Visit</a>
         </div>
-
-        <div class="relative slide-right">
-          <div class="rounded-3xl overflow-hidden shadow-xl">
-            <img src="https://images.unsplash.com/photo-1584225064785-c62a8b43d148?w=700&q=80&fit=crop" alt="Taproom experience" class="w-full h-[500px] object-cover" />
-          </div>
-          <!-- Floating card -->
-          <div class="absolute -bottom-8 -left-8 glass-light rounded-2xl p-5 max-w-[200px] hidden lg:block">
-            <div class="flex items-center gap-2 mb-2">
-              <i class="fas fa-star text-amber-400"></i>
-              <span class="font-bold text-sm">4.9/5.0</span>
-            </div>
-            <p class="text-xs text-gray-600">Rated #1 Craft Brewery in Portland</p>
-          </div>
-        </div>
+        <div class="slide-right"><img src="https://images.unsplash.com/photo-1584225064785-c62a8b43d148?w=700&q=80&fit=crop" alt="Taproom" class="rounded-3xl shadow-xl" /></div>
       </div>
     </div>
   </section>
 
-  <!-- ══ INSTAGRAM / GALLERY TEASER ════════════════════════ -->
-  <section class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12 slide-up">
-        <div class="section-label mx-auto"><i class="fab fa-instagram text-xs"></i> @copperandcask</div>
-        <h2 class="section-title">Follow the <span>Craft</span></h2>
-      </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="gallery-item rounded-2xl slide-up aspect-square">
-          <img src="https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=400&q=80&fit=crop" alt="Beer pour" class="w-full h-full object-cover" />
-          <div class="gallery-overlay"><i class="fab fa-instagram text-white text-2xl"></i></div>
-        </div>
-        <div class="gallery-item rounded-2xl slide-up aspect-square" style="transition-delay:0.1s">
-          <img src="https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=400&q=80&fit=crop" alt="Whiskey glass" class="w-full h-full object-cover" />
-          <div class="gallery-overlay"><i class="fab fa-instagram text-white text-2xl"></i></div>
-        </div>
-        <div class="gallery-item rounded-2xl slide-up aspect-square" style="transition-delay:0.2s">
-          <img src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?w=400&q=80&fit=crop" alt="Wood barrels" class="w-full h-full object-cover" />
-          <div class="gallery-overlay"><i class="fab fa-instagram text-white text-2xl"></i></div>
-        </div>
-        <div class="gallery-item rounded-2xl slide-up aspect-square" style="transition-delay:0.3s">
-          <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&q=80&fit=crop" alt="Cocktail" class="w-full h-full object-cover" />
-          <div class="gallery-overlay"><i class="fab fa-instagram text-white text-2xl"></i></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ UPCOMING EVENTS ══════════════════════════════════════ -->
+  <!-- EVENTS (Section 4) -->
   <section class="py-24 bg-primary relative overflow-hidden">
-    <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=1920&q=80&fit=crop" alt="Live music" class="w-full h-full object-cover opacity-8" />
-    </div>
     <div class="absolute inset-0 bg-gradient-to-b from-primary via-primary/95 to-primary"></div>
-
-    <!-- Floating accent -->
-    <div class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-accent/5 blur-3xl"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-        <div class="slide-up">
-          <div class="section-label border-accent/30 bg-accent/10">
-            <i class="fas fa-calendar-star text-xs"></i> What's Coming
-          </div>
-          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">Upcoming <span class="text-accent">Events</span></h2>
-          <p class="text-white/50 mt-2 max-w-md">Mark your calendar — from tasting nights to live music, there's always something brewing.</p>
-        </div>
-        <a href="services.html" class="btn-outline text-sm slide-up" style="transition-delay:.1s">
-          View All Events <i class="fas fa-arrow-right text-xs ml-1"></i>
-        </a>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Event 1 -->
-        <div class="group rounded-2xl overflow-hidden border border-white/8 hover:border-accent/30 transition-all duration-500 slide-up">
-          <div class="relative overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=500&q=80&fit=crop" alt="Cocktail Night" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-700" />
-            <div class="absolute top-4 left-4 bg-accent text-white rounded-xl px-3 py-2 text-center leading-tight shadow-accent">
-              <div class="text-xl font-display font-extrabold">18</div>
-              <div class="text-[10px] uppercase tracking-wider opacity-80">Apr</div>
-            </div>
-          </div>
-          <div class="p-6 bg-white/5 backdrop-blur-sm">
-            <div class="flex items-center gap-3 text-white/40 text-xs mb-3">
-              <span><i class="far fa-clock"></i> 7:00 PM</span>
-              <span>·</span>
-              <span><i class="fas fa-map-pin"></i> Main Taproom</span>
-            </div>
-            <h3 class="font-display text-lg font-bold text-white mb-2 group-hover:text-accent transition-colors">Spring Cocktail Launch</h3>
-            <p class="text-white/40 text-sm">Introducing 5 new seasonal cocktails crafted with our signature spirits. Includes live jazz.</p>
-          </div>
-        </div>
-
-        <!-- Event 2 -->
-        <div class="group rounded-2xl overflow-hidden border border-white/8 hover:border-accent/30 transition-all duration-500 slide-up" style="transition-delay:.1s">
-          <div class="relative overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=500&q=80&fit=crop" alt="Live Music" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-700" />
-            <div class="absolute top-4 left-4 bg-accent text-white rounded-xl px-3 py-2 text-center leading-tight shadow-accent">
-              <div class="text-xl font-display font-extrabold">25</div>
-              <div class="text-[10px] uppercase tracking-wider opacity-80">Apr</div>
-            </div>
-          </div>
-          <div class="p-6 bg-white/5 backdrop-blur-sm">
-            <div class="flex items-center gap-3 text-white/40 text-xs mb-3">
-              <span><i class="far fa-clock"></i> 8:00 PM</span>
-              <span>·</span>
-              <span><i class="fas fa-map-pin"></i> Beer Garden</span>
-            </div>
-            <h3 class="font-display text-lg font-bold text-white mb-2 group-hover:text-accent transition-colors">Live Music Night: The Hop Notes</h3>
-            <p class="text-white/40 text-sm">An evening of folk-rock with local band The Hop Notes. Beer flights & food trucks included.</p>
-          </div>
-        </div>
-
-        <!-- Event 3 -->
-        <div class="group rounded-2xl overflow-hidden border border-white/8 hover:border-accent/30 transition-all duration-500 slide-up" style="transition-delay:.2s">
-          <div class="relative overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1532634993-15f421e42ec0?w=500&q=80&fit=crop" alt="Barrel Room Tour" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-700" />
-            <div class="absolute top-4 left-4 bg-accent text-white rounded-xl px-3 py-2 text-center leading-tight shadow-accent">
-              <div class="text-xl font-display font-extrabold">03</div>
-              <div class="text-[10px] uppercase tracking-wider opacity-80">May</div>
-            </div>
-          </div>
-          <div class="p-6 bg-white/5 backdrop-blur-sm">
-            <div class="flex items-center gap-3 text-white/40 text-xs mb-3">
-              <span><i class="far fa-clock"></i> 2:00 PM</span>
-              <span>·</span>
-              <span><i class="fas fa-map-pin"></i> Barrel Room</span>
-            </div>
-            <h3 class="font-display text-lg font-bold text-white mb-2 group-hover:text-accent transition-colors">Behind the Barrels Tour</h3>
-            <p class="text-white/40 text-sm">Exclusive VIP tour of our barrel aging facility. Taste directly from the cask, guided by our head distiller.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ MEET OUR TEAM ═══════════════════════════════════════ -->
-  <section class="py-24 bg-secondary relative overflow-hidden bg-pattern">
-    <div class="blob blob-accent w-72 h-72 top-0 right-0 opacity-5"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
       <div class="text-center mb-16 slide-up">
-        <div class="section-label mx-auto">
-          <i class="fas fa-people-roof text-xs"></i> The Crew
-        </div>
-        <h2 class="section-title">Meet the <span>Makers</span></h2>
-        <p class="section-subtitle mx-auto">The passionate team behind every brew, barrel, and bottle at Copper & Cask.</p>
+        <h2 class="font-display text-4xl font-semibold text-white">Upcoming <span class="text-accent">Events</span></h2>
       </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 stagger-children">
-        <!-- Team 1 -->
-        <div class="group text-center">
-          <div class="relative mb-6 mx-auto w-52 h-52 rounded-3xl overflow-hidden shadow-lg">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80&fit=crop" alt="Marcus Chen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-4">
-              <div class="flex gap-2">
-                <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-accent transition-colors text-xs"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-accent transition-colors text-xs"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
-          </div>
-          <h3 class="font-display text-lg font-bold group-hover:text-accent transition-colors">Marcus Chen</h3>
-          <p class="text-accent text-sm font-semibold mb-1">Head Brewer</p>
-          <p class="text-gray-500 text-xs">15 years of craft brewing. Trained in Belgium. Obsessed with hops.</p>
-        </div>
-
-        <!-- Team 2 -->
-        <div class="group text-center">
-          <div class="relative mb-6 mx-auto w-52 h-52 rounded-3xl overflow-hidden shadow-lg">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80&fit=crop" alt="Elena Vasquez" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-4">
-              <div class="flex gap-2">
-                <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-accent transition-colors text-xs"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-accent transition-colors text-xs"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
-          </div>
-          <h3 class="font-display text-lg font-bold group-hover:text-accent transition-colors">Elena Vasquez</h3>
-          <p class="text-accent text-sm font-semibold mb-1">Master Distiller</p>
-          <p class="text-gray-500 text-xs">A whiskey whisperer with a nose for perfection and 12 years of distilling art.</p>
-        </div>
-
-        <!-- Team 3 -->
-        <div class="group text-center">
-          <div class="relative mb-6 mx-auto w-52 h-52 rounded-3xl overflow-hidden shadow-lg">
-            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80&fit=crop" alt="James Kendall" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-4">
-              <div class="flex gap-2">
-                <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-accent transition-colors text-xs"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-accent transition-colors text-xs"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
-          </div>
-          <h3 class="font-display text-lg font-bold group-hover:text-accent transition-colors">James Kendall</h3>
-          <p class="text-accent text-sm font-semibold mb-1">Co-Founder & CEO</p>
-          <p class="text-gray-500 text-xs">The visionary behind Copper & Cask. Portland native, craft evangelist.</p>
-        </div>
-
-        <!-- Team 4 -->
-        <div class="group text-center">
-          <div class="relative mb-6 mx-auto w-52 h-52 rounded-3xl overflow-hidden shadow-lg">
-            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80&fit=crop" alt="Sarah Mitchell" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-4">
-              <div class="flex gap-2">
-                <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-accent transition-colors text-xs"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-accent transition-colors text-xs"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
-          </div>
-          <h3 class="font-display text-lg font-bold group-hover:text-accent transition-colors">Sarah Mitchell</h3>
-          <p class="text-accent text-sm font-semibold mb-1">Events Manager</p>
-          <p class="text-gray-500 text-xs">Creates unforgettable experiences, from intimate tastings to grand celebrations.</p>
-        </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div class="card bg-white/5 border-white/10 p-6 slide-up"><h3 class="text-white font-display font-semibold text-lg mb-2">Cocktail Launch</h3><p class="text-white/40 text-sm mb-4">April 18th · 7:00 PM</p><p class="text-white/60 text-sm">Introducing our new seasonal collection.</p></div>
+        <div class="card bg-white/5 border-white/10 p-6 slide-up" style="transition-delay:.1s"><h3 class="text-white font-display font-semibold text-lg mb-2">The Hop Notes</h3><p class="text-white/40 text-sm mb-4">April 25th · 8:00 PM</p><p class="text-white/60 text-sm">Live acoustic sets in the beer garden.</p></div>
+        <div class="card bg-white/5 border-white/10 p-6 slide-up" style="transition-delay:.2s"><h3 class="text-white font-display font-semibold text-lg mb-2">Barrel Room Tour</h3><p class="text-white/40 text-sm mb-4">May 3rd · 2:00 PM</p><p class="text-white/60 text-sm">Exclusive VIP tasting and tour.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ══ CTA BANNER ════════════════════════════════════════ -->
-  <section class="relative py-20 overflow-hidden">
-    <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1559526642-c3f001ea68ee?w=1920&q=80&fit=crop" alt="Hops" class="w-full h-full object-cover" />
-    </div>
-    <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-accent/40"></div>
-    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center slide-up">
-      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">
-        Ready to Taste Something <span class="text-accent">Extraordinary</span>?
-      </h2>
-      <p class="text-white/60 text-lg mb-8 max-w-2xl mx-auto">Reserve your spot for our next tasting event or order our seasonal collection online.</p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="pricing.html" class="btn-primary text-base px-8 py-4"><i class="fas fa-ticket"></i> View Packages</a>
-        <a href="contact.html" class="btn-outline text-base px-8 py-4"><i class="fas fa-phone"></i> Get in Touch</a>
+  <!-- TEAM (Section 5) -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="section-title mb-16">Meet the <span>Makers</span></h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="group"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80&fit=crop" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" /><h4 class="font-semibold">Marcus Chen</h4><p class="text-accent text-xs">Head Brewer</p></div>
+        <div class="group"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80&fit=crop" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" /><h4 class="font-semibold">Elena Vasquez</h4><p class="text-accent text-xs">Master Distiller</p></div>
+        <div class="group"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80&fit=crop" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" /><h4 class="font-semibold">James Kendall</h4><p class="text-accent text-xs">CEO</p></div>
+        <div class="group"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80&fit=crop" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover" /><h4 class="font-semibold">Sarah Mitchell</h4><p class="text-accent text-xs">Events</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ══ FOOTER (Same as index.html) ══════════════════════ -->
+  <!-- CTA (Section 6) -->
+  <section class="py-24 bg-primary relative overflow-hidden text-center">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary to-accent/30"></div>
+    <div class="relative z-10 max-w-3xl mx-auto px-4">
+      <h2 class="font-display text-4xl font-semibold text-white mb-6">Ready for an <span class="text-accent">Experience</span>?</h2>
+      <p class="text-white/60 mb-8">Join us for a tasting, a tour, or a night of music.</p>
+      <div class="flex justify-center gap-4">
+        <a href="pricing.html" class="btn-primary">View Packages</a>
+        <a href="contact.html" class="btn-outline text-white">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="bg-primary-dark text-white pt-20 pb-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-12 mb-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 mb-16">
         <!-- Brand -->
         <div>
-          <a href="index.html" class="flex items-center gap-2.5 mb-5">
-            <div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center">
+          <a href="index.html" class="flex items-center gap-2.5 group mb-5">
+            <div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-accent transition-transform group-hover:rotate-6">
               <i class="fas fa-whiskey-glass text-white text-lg"></i>
             </div>
-            <span class="font-display text-xl font-bold">Copper <span class="text-accent">&</span> Cask</span>
+            <span class="font-display text-xl font-semibold text-white tracking-tight">Copper <span class="text-accent">&</span> Cask</span>
           </a>
           <p class="text-gray-400 text-sm mb-6 leading-relaxed">Crafted with Passion, Poured with Pride. Premium craft spirits and brews since 2010.</p>
           <div class="flex gap-3">
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
 
         <!-- Quick Links -->
         <div>
-          <h4 class="font-display font-semibold text-lg mb-5">Quick Links</h4>
+          <h3 class="font-display font-semibold text-lg mb-5">Quick Links</h3>
           <ul class="space-y-3">
-            <li><a href="about.html" class="text-gray-400 hover:text-accent transition-colors text-sm">About Us</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Our Services</a></li>
-            <li><a href="pricing.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Pricing & Plans</a></li>
-            <li><a href="gallery.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Gallery</a></li>
-            <li><a href="blog.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Blog</a></li>
-            <li><a href="contact.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Contact</a></li>
+            <li><a href="about.html" class="text-gray-400 footer-link text-sm">About Us</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Our Services</a></li>
+            <li><a href="pricing.html" class="text-gray-400 footer-link text-sm">Pricing & Plans</a></li>
+            <li><a href="gallery.html" class="text-gray-400 footer-link text-sm">Gallery</a></li>
+            <li><a href="blog.html" class="text-gray-400 footer-link text-sm">Blog</a></li>
+            <li><a href="contact.html" class="text-gray-400 footer-link text-sm">Contact</a></li>
           </ul>
         </div>
 
         <!-- Our Offerings -->
         <div>
-          <h4 class="font-display font-semibold text-lg mb-5">Our Offerings</h4>
+          <h3 class="font-display font-semibold text-lg mb-5">Our Offerings</h3>
           <ul class="space-y-3">
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Craft Beers</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Small Batch Spirits</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Brewery Tours</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Private Events</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Tasting Sessions</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Home Delivery</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Craft Beers</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Small Batch Spirits</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Brewery Tours</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Private Events</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Tasting Sessions</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Home Delivery</a></li>
           </ul>
         </div>
 
         <!-- Contact Info -->
         <div>
-          <h4 class="font-display font-semibold text-lg mb-5">Contact Us</h4>
+          <h3 class="font-display font-semibold text-lg mb-5">Contact Us</h3>
           <ul class="space-y-4 text-gray-400 text-sm">
             <li class="flex items-start gap-3">
               <i class="fas fa-map-marker-alt text-accent mt-1"></i>

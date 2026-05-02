@@ -22,7 +22,7 @@
           <div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-accent transition-transform group-hover:rotate-6">
             <i class="fas fa-whiskey-glass text-white text-lg"></i>
           </div>
-          <span class="font-display text-xl font-bold text-white tracking-tight">Copper <span class="text-accent">&</span> Cask</span>
+          <span class="font-display text-xl font-semibold text-white tracking-tight">Copper <span class="text-accent">&</span> Cask</span>
         </a>
       </div>
 
@@ -59,15 +59,18 @@
     <main class="dashboard-main">
       <!-- Top Bar -->
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4 w-full">
           <button id="sidebar-toggle" class="xl:hidden w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-primary flex-shrink-0"><i class="fas fa-bars"></i></button>
           <div class="min-w-0">
-            <h1 class="font-display text-xl sm:text-2xl font-bold text-primary truncate">Admin Dashboard</h1>
+            <h1 class="font-display text-xl sm:text-2xl font-semibold text-primary truncate">Admin Dashboard</h1>
             <p class="text-gray-500 text-xs sm:text-sm truncate">Business performance and analytics.</p>
           </div>
         </div>
-        <div class="flex items-center gap-3">
-          <button id="rtl-toggle" class="w-10 h-10 rounded-xl bg-white shadow-sm text-primary/60 hover:text-accent flex items-center justify-center transition-all" title="Toggle RTL/LTR"><i class="fas fa-globe"></i></button>
+        <div class="flex items-center gap-4 w-full sm:w-auto mt-4 sm:mt-0">
+          <button id="theme-toggle" class="w-10 h-10 rounded-xl bg-white shadow-sm text-primary/60 hover:text-accent flex items-center justify-center transition-all" title="Toggle Dark / Light Mode">
+            <i class="fas fa-moon theme-icon"></i>
+          </button>
+          <button id="rtl-toggle" class="px-3 h-10 rounded-xl bg-white shadow-sm text-primary/60 hover:text-accent flex items-center justify-center transition-all font-semibold text-xs" title="Toggle RTL/LTR">RTL</button>
           <button class="w-10 h-10 rounded-xl bg-white shadow-sm text-primary/60 hover:text-accent flex items-center justify-center transition-all relative"><i class="fas fa-bell"></i><span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span></button>
         </div>
       </div>
@@ -79,7 +82,7 @@
             <div class="icon-box icon-box-sm"><i class="fas fa-dollar-sign"></i></div>
             <span class="text-green-500 text-sm font-semibold"><i class="fas fa-arrow-up text-xs"></i> 18%</span>
           </div>
-          <h3 class="text-2xl font-display font-bold text-primary">$48,290</h3>
+          <h3 class="text-2xl font-display font-semibold text-primary">$48,290</h3>
           <p class="text-gray-400 text-sm">Total Revenue</p>
         </div>
         <div class="stat-card">
@@ -87,7 +90,7 @@
             <div class="icon-box icon-box-sm"><i class="fas fa-users"></i></div>
             <span class="text-green-500 text-sm font-semibold"><i class="fas fa-arrow-up text-xs"></i> 7%</span>
           </div>
-          <h3 class="text-2xl font-display font-bold text-primary">3,482</h3>
+          <h3 class="text-2xl font-display font-semibold text-primary">3,482</h3>
           <p class="text-gray-400 text-sm">Active Members</p>
         </div>
         <div class="stat-card">
@@ -95,7 +98,7 @@
             <div class="icon-box icon-box-sm"><i class="fas fa-shopping-cart"></i></div>
             <span class="text-amber-500 text-sm font-semibold"><i class="fas fa-minus text-xs"></i> 2%</span>
           </div>
-          <h3 class="text-2xl font-display font-bold text-primary">1,205</h3>
+          <h3 class="text-2xl font-display font-semibold text-primary">1,205</h3>
           <p class="text-gray-400 text-sm">Orders This Month</p>
         </div>
         <div class="stat-card">
@@ -103,7 +106,7 @@
             <div class="icon-box icon-box-sm"><i class="fas fa-ticket"></i></div>
             <span class="text-red-500 text-sm font-semibold">12 open</span>
           </div>
-          <h3 class="text-2xl font-display font-bold text-primary">47</h3>
+          <h3 class="text-2xl font-display font-semibold text-primary">47</h3>
           <p class="text-gray-400 text-sm">Support Tickets</p>
         </div>
       </div>
@@ -113,7 +116,7 @@
         <!-- Revenue Bar Chart -->
         <div class="bg-white rounded-2xl p-6 shadow-sm">
           <div class="flex items-center justify-between mb-6">
-            <h2 class="font-display font-bold text-lg">Monthly Revenue</h2>
+            <h2 class="font-display font-semibold text-lg">Monthly Revenue</h2>
             <span class="badge badge-accent">2026</span>
           </div>
           <div class="canvas-container h-64 sm:h-72 w-full overflow-hidden">
@@ -124,7 +127,7 @@
         <!-- Demographics Pie Chart -->
         <div class="bg-white rounded-2xl p-6 shadow-sm">
           <div class="flex items-center justify-between mb-6">
-            <h2 class="font-display font-bold text-lg">Customer Demographics</h2>
+            <h2 class="font-display font-semibold text-lg">Customer Demographics</h2>
             <span class="badge badge-info">All Time</span>
           </div>
           <div class="canvas-container h-64 sm:h-72 w-full overflow-hidden">
@@ -136,29 +139,29 @@
       <!-- Recent Activity -->
       <div class="bg-white rounded-2xl p-6 shadow-sm">
         <div class="flex items-center justify-between mb-6">
-          <h2 class="font-display font-bold text-lg">Recent Activity</h2>
+          <h2 class="font-display font-semibold text-lg">Recent Activity</h2>
           <button class="text-accent text-sm font-semibold hover:underline">View All</button>
         </div>
         <div class="space-y-4">
           <div class="flex items-center gap-4 p-3 rounded-xl bg-secondary-light">
             <div class="icon-box icon-box-sm bg-green-50 text-green-500"><i class="fas fa-user-plus"></i></div>
-            <div class="flex-1"><h4 class="font-semibold text-sm">New member registration</h4><p class="text-gray-400 text-xs">Sarah J. joined the Barrel Club · 15 min ago</p></div>
+            <div class="flex-1"><h3 class="font-semibold text-sm">New member registration</h3><p class="text-gray-400 text-xs">Sarah J. joined the Barrel Club · 15 min ago</p></div>
           </div>
           <div class="flex items-center gap-4 p-3 rounded-xl bg-secondary-light">
             <div class="icon-box icon-box-sm bg-blue-50 text-blue-500"><i class="fas fa-shopping-bag"></i></div>
-            <div class="flex-1"><h4 class="font-semibold text-sm">Online order placed</h4><p class="text-gray-400 text-xs">Order #1026 — 12 items · $127.50 · 42 min ago</p></div>
+            <div class="flex-1"><h3 class="font-semibold text-sm">Online order placed</h3><p class="text-gray-400 text-xs">Order #1026 — 12 items · $127.50 · 42 min ago</p></div>
           </div>
           <div class="flex items-center gap-4 p-3 rounded-xl bg-secondary-light">
             <div class="icon-box icon-box-sm bg-amber-50 text-amber-500"><i class="fas fa-calendar-check"></i></div>
-            <div class="flex-1"><h4 class="font-semibold text-sm">Event booking confirmed</h4><p class="text-gray-400 text-xs">Corporate event — 50 guests · Apr 25 · 2 hrs ago</p></div>
+            <div class="flex-1"><h3 class="font-semibold text-sm">Event booking confirmed</h3><p class="text-gray-400 text-xs">Corporate event — 50 guests · Apr 25 · 2 hrs ago</p></div>
           </div>
           <div class="flex items-center gap-4 p-3 rounded-xl bg-secondary-light">
             <div class="icon-box icon-box-sm bg-red-50 text-red-500"><i class="fas fa-flag"></i></div>
-            <div class="flex-1"><h4 class="font-semibold text-sm">Support ticket escalated</h4><p class="text-gray-400 text-xs">Ticket #412 requires manager review · 3 hrs ago</p></div>
+            <div class="flex-1"><h3 class="font-semibold text-sm">Support ticket escalated</h3><p class="text-gray-400 text-xs">Ticket #412 requires manager review · 3 hrs ago</p></div>
           </div>
           <div class="flex items-center gap-4 p-3 rounded-xl bg-secondary-light">
             <div class="icon-box icon-box-sm bg-purple-50 text-purple-500"><i class="fas fa-star"></i></div>
-            <div class="flex-1"><h4 class="font-semibold text-sm">New 5-star review</h4><p class="text-gray-400 text-xs">"Best brewery in Portland!" — Mike T. · 5 hrs ago</p></div>
+            <div class="flex-1"><h3 class="font-semibold text-sm">New 5-star review</h3><p class="text-gray-400 text-xs">"Best brewery in Portland!" — Mike T. · 5 hrs ago</p></div>
           </div>
         </div>
       </div>

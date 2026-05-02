@@ -17,16 +17,28 @@
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between nav-inner">
-        <div class="flex items-center gap-10">
-          <a href="index.html" class="flex items-center gap-2.5 group"><div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-accent transition-transform group-hover:rotate-6"><i class="fas fa-whiskey-glass text-white text-lg"></i></div><span class="font-display text-xl font-bold text-white tracking-tight">Copper <span class="text-accent">&</span> Cask</span></a>
-          <div class="hidden xl:flex items-center gap-7">
-            <div class="nav-dropdown relative"><button class="nav-link flex items-center gap-1.5">Home <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button><div class="dropdown-menu"><a href="index.html"><i class="fas fa-gem"></i> Home 1</a><a href="index2.html"><i class="fas fa-fire"></i> Home 2</a></div></div>
+        <div class="flex items-center gap-8">
+          <a href="index.html" class="flex items-center gap-2.5 group"><div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-accent transition-transform group-hover:rotate-6"><i class="fas fa-whiskey-glass text-white text-lg"></i></div><span class="font-display text-xl font-semibold text-white tracking-tight">Copper <span class="text-accent">&</span> Cask</span></a>
+          <div class="hidden xl:flex items-center gap-8">
+            <div class="nav-dropdown relative">
+              <button class="nav-link flex items-center gap-1.5">Home <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button>
+              <div class="dropdown-menu">
+                <a href="index.html">Home 1</a>
+                <a href="index2.html">Home 2</a>
+              </div>
+            </div>
             <a href="about.html" class="nav-link">About</a>
             <a href="services.html" class="nav-link">Services</a>
             <a href="pricing.html" class="nav-link active">Pricing</a>
-            <div class="nav-dropdown relative"><button class="nav-link flex items-center gap-1.5">Blog <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button><div class="dropdown-menu"><a href="blog.html"><i class="fas fa-newspaper"></i> Blog Listing</a><a href="blog-details.html"><i class="fas fa-pen-fancy"></i> Blog Post</a></div></div>
+            <a href="blog.html" class="nav-link">Blog</a>
             <a href="contact.html" class="nav-link">Contact</a>
-            <div class="nav-dropdown relative"><button class="nav-link flex items-center gap-1.5">Dashboard <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button><div class="dropdown-menu"><a href="user-dashboard.html"><i class="fas fa-user"></i> User Dashboard</a><a href="admin-dashboard.html"><i class="fas fa-shield-halved"></i> Admin Dashboard</a></div></div>
+            <div class="nav-dropdown relative">
+              <button class="nav-link flex items-center gap-1.5">Dashboard <i class="fas fa-chevron-down text-[10px] opacity-60"></i></button>
+              <div class="dropdown-menu">
+                <a href="user-dashboard.html">User Dashboard</a>
+                <a href="admin-dashboard.html">Admin Dashboard</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="flex items-center gap-3 ml-auto">
@@ -34,8 +46,8 @@
             <button id="theme-toggle" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-accent/20 text-white/70 hover:text-accent flex items-center justify-center transition-all" title="Toggle Dark / Light Mode">
               <i class="fas fa-moon theme-icon"></i>
             </button>
-            <button id="rtl-toggle" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-accent/20 text-white/70 hover:text-accent flex items-center justify-center transition-all" title="Toggle RTL/LTR">
-              <i class="fas fa-globe"></i>
+            <button id="rtl-toggle" class="px-3 h-10 rounded-xl bg-white/10 hover:bg-accent/20 text-white/70 hover:text-accent flex items-center justify-center transition-all font-semibold text-xs" title="Toggle RTL/LTR">
+              RTL
             </button>
             <a href="login.html" class="btn-outline text-sm">Login</a>
             <a href="register.html" class="btn-primary text-sm">Register</a>
@@ -46,8 +58,8 @@
               <button id="theme-toggle-mobile" class="w-9 h-9 rounded-lg bg-white/10 text-white/70 flex items-center justify-center">
                 <i class="fas fa-moon theme-icon text-sm"></i>
               </button>
-              <button id="rtl-toggle-mobile" class="w-9 h-9 rounded-lg bg-white/10 text-white/70 flex items-center justify-center" title="Toggle RTL/LTR">
-                <i class="fas fa-globe text-sm"></i>
+              <button id="rtl-toggle-mobile" class="px-2 h-9 rounded-lg bg-white/10 text-white/70 flex items-center justify-center font-semibold text-[10px]" title="Toggle RTL/LTR">
+                RTL
               </button>
             </div>
             <button id="mobile-menu-btn" class="w-10 h-10 rounded-xl bg-white/10 text-white flex items-center justify-center">
@@ -64,8 +76,7 @@
         <a href="about.html" class="mobile-link">About</a>
         <a href="services.html" class="mobile-link">Services</a>
         <a href="pricing.html" class="mobile-link active">Pricing</a>
-        <button class="mobile-dropdown-trigger">Blog <i class="fas fa-chevron-down chevron"></i></button>
-        <div class="mobile-sub-menu"><a href="blog.html">Blog Listing</a><a href="blog-details.html">Blog Post</a></div>
+        <a href="blog.html" class="mobile-link">Blog</a>
         <a href="contact.html" class="mobile-link">Contact</a>
         <button class="mobile-dropdown-trigger">Dashboard <i class="fas fa-chevron-down chevron"></i></button>
         <div class="mobile-sub-menu"><a href="user-dashboard.html">User Dashboard</a><a href="admin-dashboard.html">Admin Dashboard</a></div>
@@ -77,17 +88,18 @@
     </div>
   </nav>
 
-  <!-- PAGE HEADER -->
-  <section class="relative pt-32 pb-20 bg-primary overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-accent/10"></div>
+  <!-- PAGE HEADER (Section 1) -->
+  <section class="relative py-24 bg-primary overflow-hidden">
+    <div class="absolute inset-0"><img src="https://images.unsplash.com/photo-1559526642-c3f001ea68ee?w=1920&q=80&fit=crop" alt="Membership" class="w-full h-full object-cover opacity-20" /></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary"></div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div class="section-label mx-auto border-accent/30 bg-accent/10 slide-up"><i class="fas fa-tags text-xs"></i> Pricing</div>
-      <h1 class="font-display text-4xl sm:text-5xl font-extrabold text-white mb-4 slide-up" style="transition-delay:.1s">Membership <span class="text-accent">Plans</span></h1>
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white mb-4 slide-up" style="transition-delay:.1s">Membership <span class="text-accent">Plans</span></h1>
       <p class="text-white/50 max-w-xl mx-auto slide-up" style="transition-delay:.2s">Join the Copper & Cask family with a plan that suits your craft lifestyle.</p>
     </div>
   </section>
 
-  <!-- PRICING CARDS -->
+  <!-- PRICING CARDS (Section 2) -->
   <section class="py-24 bg-white relative overflow-hidden">
     <div class="blob blob-accent w-72 h-72 top-20 -right-36 opacity-5"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,11 +108,11 @@
         <div class="pricing-card slide-up">
           <div class="text-center mb-6">
             <div class="icon-box icon-box-lg mx-auto mb-4"><i class="fas fa-mug-hot"></i></div>
-            <h3 class="font-display text-2xl font-bold mb-1">Casual</h3>
+            <h3 class="font-display text-2xl font-semibold mb-1">Casual</h3>
             <p class="text-gray-400 text-sm">Perfect for occasional visitors</p>
           </div>
           <div class="text-center mb-6">
-            <span class="text-4xl font-display font-extrabold text-primary">$0</span>
+            <span class="text-4xl font-display font-semibold text-primary">$0</span>
             <span class="text-gray-400 text-sm"> / free</span>
           </div>
           <ul class="space-y-3 mb-8">
@@ -119,11 +131,11 @@
           <div class="absolute top-4 right-4 badge bg-accent text-white"><i class="fas fa-star text-xs"></i> Most Popular</div>
           <div class="text-center mb-6">
             <div class="w-20 h-20 rounded-2xl bg-accent/20 flex items-center justify-center mx-auto mb-4 text-accent text-3xl"><i class="fas fa-beer-mug-empty"></i></div>
-            <h3 class="font-display text-2xl font-bold mb-1">Growler Club</h3>
+            <h3 class="font-display text-2xl font-semibold mb-1">Growler Club</h3>
             <p class="text-white/50 text-sm">For the dedicated craft enthusiast</p>
           </div>
           <div class="text-center mb-6">
-            <span class="text-4xl font-display font-extrabold">$29</span>
+            <span class="text-4xl font-display font-semibold">$29</span>
             <span class="text-white/50 text-sm"> / month</span>
           </div>
           <ul class="space-y-3 mb-8">
@@ -141,11 +153,11 @@
         <div class="pricing-card slide-up" style="transition-delay:.2s">
           <div class="text-center mb-6">
             <div class="icon-box icon-box-lg mx-auto mb-4"><i class="fas fa-crown"></i></div>
-            <h3 class="font-display text-2xl font-bold mb-1">Barrel Club</h3>
+            <h3 class="font-display text-2xl font-semibold mb-1">Barrel Club</h3>
             <p class="text-gray-400 text-sm">The ultimate VIP experience</p>
           </div>
           <div class="text-center mb-6">
-            <span class="text-4xl font-display font-extrabold text-primary">$79</span>
+            <span class="text-4xl font-display font-semibold text-primary">$79</span>
             <span class="text-gray-400 text-sm"> / month</span>
           </div>
           <ul class="space-y-3 mb-8">
@@ -167,8 +179,28 @@
     </div>
   </section>
 
-  <!-- PRICING FAQ -->
-  <section class="py-24 bg-secondary bg-pattern">
+  <!-- MEMBER TESTIMONIALS (Section 3) -->
+  <section class="py-24 bg-secondary relative overflow-hidden bg-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 slide-up">
+        <div class="section-label mx-auto">Member Voice</div>
+        <h2 class="section-title">What Our <span>Members</span> Say</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="card p-8">
+          <p class="text-gray-600 italic mb-4">"The Barrel Club membership is the highlight of my month. The blending events are truly unique."</p>
+          <div class="font-semibold">- John D., Barrel Club Member</div>
+        </div>
+        <div class="card p-8">
+          <p class="text-gray-600 italic mb-4">"Best decision ever. The 15% discount on growler fills paid for itself in two visits!"</p>
+          <div class="font-semibold">- Sarah W., Growler Club Member</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING FAQ (Section 4) -->
+  <section class="py-24 bg-white relative overflow-hidden">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12 slide-up">
         <div class="section-label mx-auto"><i class="fas fa-circle-question text-xs"></i> FAQ</div>
@@ -195,36 +227,51 @@
     </div>
   </section>
 
-  <!-- WHY JOIN -->
+  <!-- WHY JOIN (Section 5) -->
   <section class="py-20 bg-primary relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-light to-accent/10"></div>
     <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-accent/8 blur-3xl"></div>
     <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12 slide-up">
-        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mb-4">Why Join the <span class="text-accent">Club</span>?</h2>
+        <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white mb-4">Why Join the <span class="text-accent">Club</span>?</h2>
         <p class="text-white/50 max-w-xl mx-auto">More than just discounts — it's a community of craft lovers who share a passion for quality.</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
         <div class="glass rounded-2xl p-5 text-center hover-float">
           <div class="text-accent text-3xl mb-3"><i class="fas fa-percent"></i></div>
-          <h4 class="font-display font-bold text-white text-sm mb-1">Exclusive Savings</h4>
+          <h4 class="font-display font-semibold text-white text-sm mb-1">Exclusive Savings</h4>
           <p class="text-white/40 text-xs">Up to 25% off every purchase, including seasonal releases.</p>
         </div>
         <div class="glass rounded-2xl p-5 text-center hover-float">
           <div class="text-accent text-3xl mb-3"><i class="fas fa-glass-cheers"></i></div>
-          <h4 class="font-display font-bold text-white text-sm mb-1">VIP Events</h4>
+          <h4 class="font-display font-semibold text-white text-sm mb-1">VIP Events</h4>
           <p class="text-white/40 text-xs">Members-only blending evenings and early access tastings.</p>
         </div>
         <div class="glass rounded-2xl p-5 text-center hover-float">
           <div class="text-accent text-3xl mb-3"><i class="fas fa-gift"></i></div>
-          <h4 class="font-display font-bold text-white text-sm mb-1">Monthly Perks</h4>
+          <h4 class="font-display font-semibold text-white text-sm mb-1">Monthly Perks</h4>
           <p class="text-white/40 text-xs">Growler fills, spirit bottles, and surprise gift boxes.</p>
         </div>
         <div class="glass rounded-2xl p-5 text-center hover-float">
           <div class="text-accent text-3xl mb-3"><i class="fas fa-users"></i></div>
-          <h4 class="font-display font-bold text-white text-sm mb-1">Community</h4>
+          <h4 class="font-display font-semibold text-white text-sm mb-1">Community</h4>
           <p class="text-white/40 text-xs">Join 2,000+ members who share your love for artisan craft.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY PARTNERS (Section 6) -->
+  <section class="py-24 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <div class="section-label mx-auto mb-6">Our Network</div>
+      <h2 class="section-title">Trusted by <span>Local</span> Partners</h2>
+      <p class="text-gray-500 max-w-2xl mx-auto mb-12">We work closely with the best in the industry to bring you exclusive benefits and events.</p>
+      <div class="flex flex-wrap justify-center gap-12 opacity-30 grayscale hover:grayscale-0 transition-all">
+        <div class="text-2xl font-bold font-display tracking-tighter">PORTLAND EATS</div>
+        <div class="text-2xl font-bold font-display tracking-tighter">CRAFT GUILD</div>
+        <div class="text-2xl font-bold font-display tracking-tighter">OREGON BREWS</div>
+        <div class="text-2xl font-bold font-display tracking-tighter">DISTILLER'S CO.</div>
       </div>
     </div>
   </section>
@@ -232,53 +279,53 @@
   <!-- FOOTER -->
   <footer class="bg-primary-dark text-white pt-20 pb-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-12 mb-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 mb-16">
         <!-- Brand -->
         <div>
-          <a href="index.html" class="flex items-center gap-2.5 mb-5">
-            <div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center">
+          <a href="index.html" class="flex items-center gap-2.5 group mb-5">
+            <div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-accent transition-transform group-hover:rotate-6">
               <i class="fas fa-whiskey-glass text-white text-lg"></i>
             </div>
-            <span class="font-display text-xl font-bold">Copper <span class="text-accent">&</span> Cask</span>
+            <span class="font-display text-xl font-semibold text-white tracking-tight">Copper <span class="text-accent">&</span> Cask</span>
           </a>
           <p class="text-gray-400 text-sm mb-6 leading-relaxed">Crafted with Passion, Poured with Pride. Premium craft spirits and brews since 2010.</p>
           <div class="flex gap-3">
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
 
         <!-- Quick Links -->
         <div>
-          <h4 class="font-display font-semibold text-lg mb-5">Quick Links</h4>
+          <h3 class="font-display font-semibold text-lg mb-5">Quick Links</h3>
           <ul class="space-y-3">
-            <li><a href="about.html" class="text-gray-400 hover:text-accent transition-colors text-sm">About Us</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Our Services</a></li>
-            <li><a href="pricing.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Pricing & Plans</a></li>
-            <li><a href="gallery.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Gallery</a></li>
-            <li><a href="blog.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Blog</a></li>
-            <li><a href="contact.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Contact</a></li>
+            <li><a href="about.html" class="text-gray-400 footer-link text-sm">About Us</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Our Services</a></li>
+            <li><a href="pricing.html" class="text-gray-400 footer-link text-sm">Pricing & Plans</a></li>
+            <li><a href="gallery.html" class="text-gray-400 footer-link text-sm">Gallery</a></li>
+            <li><a href="blog.html" class="text-gray-400 footer-link text-sm">Blog</a></li>
+            <li><a href="contact.html" class="text-gray-400 footer-link text-sm">Contact</a></li>
           </ul>
         </div>
 
         <!-- Our Offerings -->
         <div>
-          <h4 class="font-display font-semibold text-lg mb-5">Our Offerings</h4>
+          <h3 class="font-display font-semibold text-lg mb-5">Our Offerings</h3>
           <ul class="space-y-3">
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Craft Beers</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Small Batch Spirits</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Brewery Tours</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Private Events</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Tasting Sessions</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-accent transition-colors text-sm">Home Delivery</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Craft Beers</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Small Batch Spirits</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Brewery Tours</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Private Events</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Tasting Sessions</a></li>
+            <li><a href="services.html" class="text-gray-400 footer-link text-sm">Home Delivery</a></li>
           </ul>
         </div>
 
         <!-- Contact Info -->
         <div>
-          <h4 class="font-display font-semibold text-lg mb-5">Contact Us</h4>
+          <h3 class="font-display font-semibold text-lg mb-5">Contact Us</h3>
           <ul class="space-y-4 text-gray-400 text-sm">
             <li class="flex items-start gap-3">
               <i class="fas fa-map-marker-alt text-accent mt-1"></i>

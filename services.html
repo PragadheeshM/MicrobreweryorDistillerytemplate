@@ -43,10 +43,10 @@
         </div>
         <div class="flex items-center gap-3 ml-auto">
           <div class="hidden md:flex items-center gap-3">
-            <button id="theme-toggle" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-accent/20 text-white/70 hover:text-accent flex items-center justify-center transition-all" title="Toggle Dark / Light Mode">
+            <button id="theme-toggle" class="w-10 h-10 rounded-xl nav-toggle-btn" title="Toggle Dark / Light Mode">
               <i class="fas fa-moon theme-icon"></i>
             </button>
-            <button id="rtl-toggle" class="px-3 h-10 rounded-xl bg-white/10 hover:bg-accent/20 text-white/70 hover:text-accent flex items-center justify-center transition-all font-semibold text-xs" title="Toggle RTL/LTR">
+            <button id="rtl-toggle" class="px-3 h-10 rounded-xl transition-all font-semibold text-xs nav-toggle-btn" title="Toggle RTL/LTR">
               RTL
             </button>
             <a href="login.html" class="btn-outline text-sm">Login</a>
@@ -55,10 +55,10 @@
           <!-- Mobile Menu Button -->
           <div class="flex items-center xl:hidden gap-3">
             <div class="mobile-toggles md:hidden flex items-center gap-2">
-              <button id="theme-toggle-mobile" class="w-9 h-9 rounded-lg bg-white/10 text-white/70 flex items-center justify-center">
+              <button id="theme-toggle-mobile" class="w-9 h-9 rounded-lg nav-toggle-btn">
                 <i class="fas fa-moon theme-icon text-sm"></i>
               </button>
-              <button id="rtl-toggle-mobile" class="px-2 h-9 rounded-lg bg-white/10 text-white/70 flex items-center justify-center font-semibold text-[10px]" title="Toggle RTL/LTR">
+              <button id="rtl-toggle-mobile" class="px-2 h-9 rounded-lg nav-toggle-btn font-semibold text-[10px]" title="Toggle RTL/LTR">
                 RTL
               </button>
             </div>
@@ -89,13 +89,13 @@
   </nav>
 
   <!-- PAGE HEADER -->
-  <section class="relative py-24 bg-primary overflow-hidden">
-    <div class="absolute inset-0"><img src="https://images.unsplash.com/photo-1584225064785-c62a8b43d148?w=1920&q=80&fit=crop" alt="Brewing" class="w-full h-full object-cover opacity-20" /></div>
-    <div class="absolute inset-0 bg-gradient-to-b from-primary/90 to-primary"></div>
+  <section class="hero-section relative py-24 bg-black overflow-hidden">
+    <div class="absolute inset-0"><img src="https://images.unsplash.com/photo-1584225064785-c62a8b43d148?w=1920&q=80&fit=crop" alt="Brewing" class="w-full h-full object-cover opacity-30" /></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/90 to-black"></div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div class="section-label mx-auto border-accent/30 bg-accent/10 slide-up"><i class="fas fa-concierge-bell text-xs"></i> Our Services</div>
       <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white mb-4 slide-up" style="transition-delay:.1s">What We <span class="text-accent">Offer</span></h1>
-      <p class="text-white/50 max-w-xl mx-auto slide-up" style="transition-delay:.2s">From grain to glass — explore the complete Copper & Cask experience.</p>
+      <p class="text-white/70 max-w-xl mx-auto slide-up" style="transition-delay:.2s">From grain to glass — explore the complete Copper & Cask experience.</p>
     </div>
   </section>
 
@@ -283,15 +283,27 @@
   </section>
 
   <!-- CTA BANNER -->
-  <section class="relative py-20 overflow-hidden">
-    <div class="absolute inset-0"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1920&q=80&fit=crop" alt="Taproom" class="w-full h-full object-cover" /></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-primary/95 to-accent/30"></div>
+  <section class="relative py-24 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1920&q=80&fit=crop" alt="Taproom" class="w-full h-full object-cover" />
+    </div>
+    <!-- Permanent high-contrast dark overlay -->
+    <div class="absolute inset-0 bg-black/70"></div>
+    
     <div class="relative z-10 max-w-4xl mx-auto px-4 text-center slide-up">
-      <h2 class="font-display text-3xl sm:text-4xl font-semibold text-white mb-4">Ready to Experience Our <span class="text-accent">Craft</span>?</h2>
-      <p class="text-white/60 text-lg mb-8 max-w-2xl mx-auto">Book a tour, reserve a tasting, or simply walk into our taproom. Your next great pour is waiting.</p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="pricing.html" class="btn-primary text-base px-8 py-4"><i class="fas fa-ticket"></i> View Membership Plans</a>
-        <a href="contact.html" class="btn-outline text-base px-8 py-4"><i class="fas fa-calendar-check"></i> Book a Tour</a>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+        Ready to Experience Our <span class="text-accent">Craft</span>?
+      </h2>
+      <p class="text-white/90 text-lg sm:text-xl mb-10 max-w-2xl mx-auto leading-relaxed font-medium">
+        Book a tour, reserve a tasting, or simply walk into our taproom. Your next great pour is waiting.
+      </p>
+      <div class="flex flex-wrap justify-center gap-5">
+        <a href="pricing.html" class="btn-primary text-base px-10 py-4 shadow-xl">
+          <i class="fas fa-ticket"></i> View Membership Plans
+        </a>
+        <a href="contact.html" class="btn-outline text-white text-base px-10 py-4 backdrop-blur-md font-bold">
+          <i class="fas fa-calendar-check"></i> Book a Tour
+        </a>
       </div>
     </div>
   </section>
@@ -319,7 +331,7 @@
 
         <!-- Quick Links -->
         <div>
-          <h3 class="font-display font-semibold text-lg mb-5">Quick Links</h3>
+          <h3 class="font-display font-semibold text-lg mb-5 text-white">Quick Links</h3>
           <ul class="space-y-3">
             <li><a href="about.html" class="text-gray-400 footer-link text-sm">About Us</a></li>
             <li><a href="services.html" class="text-gray-400 footer-link text-sm">Our Services</a></li>
@@ -332,7 +344,7 @@
 
         <!-- Our Offerings -->
         <div>
-          <h3 class="font-display font-semibold text-lg mb-5">Our Offerings</h3>
+          <h3 class="font-display font-semibold text-lg mb-5 text-white">Our Offerings</h3>
           <ul class="space-y-3">
             <li><a href="services.html" class="text-gray-400 footer-link text-sm">Craft Beers</a></li>
             <li><a href="services.html" class="text-gray-400 footer-link text-sm">Small Batch Spirits</a></li>
@@ -345,7 +357,7 @@
 
         <!-- Contact Info -->
         <div>
-          <h3 class="font-display font-semibold text-lg mb-5">Contact Us</h3>
+          <h3 class="font-display font-semibold text-lg mb-5 text-white">Contact Us</h3>
           <ul class="space-y-4 text-gray-400 text-sm">
             <li class="flex items-start gap-3">
               <i class="fas fa-map-marker-alt text-accent mt-1"></i>

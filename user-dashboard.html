@@ -26,32 +26,21 @@
         </a>
       </div>
 
-      <div class="px-4 mb-4"><p class="text-xs uppercase tracking-wider text-white/30 px-2">Main</p></div>
-      <nav>
-        <a href="user-dashboard.html" class="sidebar-link active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-        <a href="#" class="sidebar-link"><i class="fas fa-box"></i> My Orders</a>
-        <a href="#" class="sidebar-link"><i class="fas fa-credit-card"></i> Subscriptions</a>
-        <a href="#" class="sidebar-link"><i class="fas fa-ticket"></i> Support Tickets</a>
-        <a href="user-profile.html" class="sidebar-link"><i class="fas fa-user-gear"></i> Profile</a>
-      </nav>
+      <div class="flex-1 overflow-y-auto pt-10">
+        <div class="px-4 mb-4"><p class="text-xs uppercase tracking-wider text-white/30 px-2">Main Navigation</p></div>
+        <nav>
+          <a href="user-dashboard.html" class="sidebar-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+          <a href="#" class="sidebar-link" onclick="showToast('info', 'Feature Coming Soon', 'The My Orders section is being developed.')"><i class="fas fa-box"></i> My Orders</a>
+          <a href="#" class="sidebar-link" onclick="showToast('info', 'Feature Coming Soon', 'Subscription management will be available shortly.')"><i class="fas fa-credit-card"></i> Subscriptions</a>
+          <a href="#" class="sidebar-link" onclick="showToast('info', 'Feature Coming Soon', 'Support ticketing system is coming soon.')"><i class="fas fa-ticket"></i> Support Tickets</a>
+          <a href="user-profile.html" class="sidebar-link"><i class="fas fa-user-gear"></i> Profile</a>
+        </nav>
+      </div>
 
-      <div class="px-4 mt-6 mb-4"><p class="text-xs uppercase tracking-wider text-white/30 px-2">Pages</p></div>
-      <nav>
-        <a href="index.html" class="sidebar-link"><i class="fas fa-home"></i> Homepage</a>
-        <a href="services.html" class="sidebar-link"><i class="fas fa-concierge-bell"></i> Services</a>
-        <a href="pricing.html" class="sidebar-link"><i class="fas fa-tags"></i> Pricing</a>
-        <a href="blog.html" class="sidebar-link"><i class="fas fa-newspaper"></i> Blog</a>
-      </nav>
-
-      <div class="mt-auto px-4 pt-6 border-t border-white/10 mt-6">
-        <div class="flex items-center gap-3 px-2 py-3">
-          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80&fit=crop" alt="User" class="w-9 h-9 rounded-full object-cover" />
-          <div>
-            <p class="text-sm font-semibold text-white">James K.</p>
-            <p class="text-xs text-white/40">Growler Member</p>
-          </div>
-          <a href="login.html" class="ml-auto text-white/30 hover:text-accent transition-colors"><i class="fas fa-right-from-bracket"></i></a>
-        </div>
+      <div class="px-4 pb-6 mt-auto">
+        <a href="login.html" class="sidebar-link text-white/60 hover:text-white bg-white/5 hover:bg-red-500/10 rounded-xl transition-all">
+          <i class="fas fa-right-from-bracket"></i> Logout
+        </a>
       </div>
     </aside>
 
@@ -66,7 +55,7 @@
             <p class="text-gray-500 text-xs sm:text-sm truncate">Membership status and activity.</p>
           </div>
         </div>
-        <div class="flex items-center gap-4 w-full sm:w-auto mt-4 sm:mt-0">
+        <div class="flex items-center gap-2 sm:gap-3 w-full sm:w-auto mt-4 sm:mt-0">
           <button id="theme-toggle" class="w-10 h-10 rounded-xl bg-white shadow-sm text-primary/60 hover:text-accent flex items-center justify-center transition-all" title="Toggle Dark / Light Mode">
             <i class="fas fa-moon theme-icon"></i>
           </button>
@@ -75,6 +64,14 @@
             <i class="fas fa-bell"></i>
             <span class="absolute top-2 right-2 w-2 h-2 bg-accent rounded-full"></span>
           </button>
+          <div class="h-10 w-px bg-gray-200 mx-1 hidden sm:block"></div>
+          <a href="user-profile.html" class="flex items-center gap-3 pl-2 group">
+            <div class="text-right hidden xl:block">
+              <p class="text-sm font-bold text-primary group-hover:text-accent transition-colors whitespace-nowrap">James K.</p>
+              <p class="text-[10px] text-gray-400 uppercase tracking-widest">Member</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80&fit=crop" alt="User" class="w-10 h-10 rounded-xl object-cover shadow-sm border-2 border-white group-hover:border-accent transition-all" />
+          </a>
         </div>
       </div>
 
@@ -206,7 +203,7 @@
     initDoughnutChart('usageChart',
       ['Tours Used', 'Orders', 'Growler Fills', 'Remaining'],
       [3, 8, 4, 5],
-      ['#c17817', '#1a1a2e', '#d4922e', '#e8e0d0']
+      ['#c17817', '#111111', '#d4922e', '#e8e0d0']
     );
   </script>
 </body>

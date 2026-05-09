@@ -263,7 +263,7 @@
   // Attach listeners to any HARDCODED theme buttons
   const existingThemeBtn = document.getElementById('theme-toggle');
   if (existingThemeBtn) existingThemeBtn.addEventListener('click', toggleTheme);
-  
+
   const existingThemeBtnMobile = document.getElementById('theme-toggle-mobile');
   if (existingThemeBtnMobile) existingThemeBtnMobile.addEventListener('click', toggleTheme);
 
@@ -282,7 +282,7 @@
     var fb = document.createElement('button');
     fb.id = 'theme-toggle';
     fb.className = 'fixed top-4 right-4 z-[60] w-11 h-11 rounded-xl flex items-center justify-center transition-all shadow-lg cursor-pointer backdrop-blur-md border';
-    
+
     function updateFloatingBtnStyle(isDark) {
       if (isDark) {
         fb.classList.remove('bg-white', 'border-gray-200', 'text-primary');
@@ -292,16 +292,16 @@
         fb.classList.add('bg-white', 'border-gray-200', 'text-primary');
       }
     }
-    
+
     fb.title = 'Toggle Dark / Light Mode';
     var fIcon = getTheme() === 'dark' ? 'fa-sun' : 'fa-moon';
     fb.innerHTML = '<i class="fas ' + fIcon + ' theme-icon"></i>';
     fb.addEventListener('click', toggleTheme);
     document.body.appendChild(fb);
-    
+
     // Initial style
     updateFloatingBtnStyle(getTheme() === 'dark');
-    
+
     // Listen for theme changes to update floating button
     const observer = new MutationObserver(() => updateFloatingBtnStyle(getTheme() === 'dark'));
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
@@ -475,7 +475,7 @@
   window.initDoughnutChart = function (canvasId, labels, data, colors) {
     const ctx = document.getElementById(canvasId);
     if (!ctx) return;
-    
+
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     const textColor = isDark ? 'rgba(255, 255, 255, 0.7)' : '#666';
 
@@ -538,20 +538,26 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        layout: {
+          padding: {
+            left: 10,
+            right: 10
+          }
+        },
         scales: {
           y: {
             beginAtZero: true,
             grid: { color: gridColor },
-            ticks: { 
+            ticks: {
               color: textColor,
-              font: { family: 'Inter', size: 11 } 
+              font: { family: 'Inter', size: 11 }
             },
           },
           x: {
             grid: { display: false },
-            ticks: { 
+            ticks: {
               color: textColor,
-              font: { family: 'Inter', size: 11 } 
+              font: { family: 'Inter', size: 11 }
             },
           },
         },
@@ -580,7 +586,7 @@
             data: data,
             backgroundColor: colors,
             borderWidth: 2,
-            borderColor: isDark ? '#1a1a2e' : '#fff',
+            borderColor: isDark ? '#0a0a0a' : '#fff',
             hoverOffset: 10,
           },
         ],
@@ -623,8 +629,19 @@
     });
   });
 
-  // ── Active Nav Link Highlight ─────────────────────────────
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  
+  // Dashboard sidebars
+  document.querySelectorAll('.sidebar-link').forEach((link) => {
+    const href = link.getAttribute('href');
+    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+
+  // Main nav & mobile links
   document.querySelectorAll('.nav-link, .mobile-link').forEach((link) => {
     const href = link.getAttribute('href');
     if (href === currentPage) {
@@ -650,7 +667,7 @@
     card.addEventListener('click', (e) => {
       // Don't trigger if a link inside was clicked directly
       if (e.target.closest('a')) return;
-      
+
       const link = card.querySelector('h3 a') || card.querySelector('a');
       if (link) {
         window.location.href = link.getAttribute('href');

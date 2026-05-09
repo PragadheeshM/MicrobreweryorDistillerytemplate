@@ -194,64 +194,76 @@
   </section>
 
   <!-- TIMELINE -->
-  <section class="py-24 bg-white">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="py-24 bg-black relative overflow-hidden">
+    <!-- Background Decor -->
+    <div class="blob blob-accent w-96 h-96 -top-48 -left-48 opacity-[0.03]"></div>
+    <div class="blob blob-primary w-96 h-96 -bottom-48 -right-48 opacity-[0.05]"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center mb-16 slide-up">
-        <div class="section-label mx-auto"><i class="fas fa-timeline text-xs"></i> Our Journey</div>
-        <h2 class="section-title">Milestones That <span>Matter</span></h2>
+        <div class="section-label mx-auto border-accent/30 bg-accent/10"><i class="fas fa-timeline text-xs"></i> Our Journey</div>
+        <h2 class="section-title text-white">Milestones That <span>Matter</span></h2>
+        <p class="text-white/50 max-w-lg mx-auto">A decade of passion, craft, and community — one batch at a time.</p>
       </div>
 
       <div class="relative">
         <!-- Vertical Line -->
-        <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-accent/20 -translate-x-1/2"></div>
+        <div class="absolute left-7 top-7 bottom-7 w-px bg-gradient-to-b from-transparent via-accent/40 to-transparent"></div>
 
-        <div class="space-y-12">
-          <div class="relative flex items-start gap-6 lg:gap-12 slide-up">
-            <div
-              class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-semibold text-sm flex-shrink-0 z-10 shadow-accent">
+        <div class="space-y-8">
+          <!-- 2010 Milestone -->
+          <div class="relative flex items-center gap-6 md:gap-10 slide-up">
+            <div class="timeline-dot-glow w-14 h-14 rounded-full bg-accent flex items-center justify-center text-white text-lg flex-shrink-0 z-10 border-4 border-black transition-all">
               <i class="fas fa-seedling"></i>
             </div>
-            <div class="card flex-1">
-              <div class="badge badge-accent mb-2">2010</div>
-              <h3 class="font-display font-semibold text-lg mb-2">The Garage Era</h3>
-              <p class="text-gray-500 text-sm">Founded by Marcus & David with a single copper kettle and a dream. First
-                batch: 5 gallons of amber ale.</p>
+            <div class="timeline-card-wrapper flex-1 bg-white/5 border border-white/10 rounded-2xl p-5 md:p-6 transition-all hover:bg-white/[0.08] hover:border-accent/30 group">
+              <div class="mb-3">
+                <span class="text-accent font-display font-bold text-[10px] tracking-[0.2em] uppercase block mb-1">2010 Milestone</span>
+                <h3 class="font-display font-semibold text-xl text-white group-hover:text-accent transition-colors leading-tight">The Garage Era</h3>
+              </div>
+              <p class="text-white/50 text-sm leading-relaxed max-w-xl">Founded by Marcus & David with a single copper kettle and a dream. First batch: 5 gallons of amber ale.</p>
             </div>
           </div>
-          <div class="relative flex items-start gap-6 lg:gap-12 slide-up" style="transition-delay:.1s">
-            <div
-              class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-semibold text-sm flex-shrink-0 z-10 shadow-accent">
+
+          <!-- 2013 Milestone -->
+          <div class="relative flex items-center gap-6 md:gap-10 slide-up" style="transition-delay:.1s">
+            <div class="timeline-dot-glow w-14 h-14 rounded-full bg-accent flex items-center justify-center text-white text-lg flex-shrink-0 z-10 border-4 border-black transition-all">
               <i class="fas fa-store"></i>
             </div>
-            <div class="card flex-1">
-              <div class="badge badge-accent mb-2">2013</div>
-              <h3 class="font-display font-semibold text-lg mb-2">The Warehouse</h3>
-              <p class="text-gray-500 text-sm">Moved into a 5,000 sq ft converted warehouse. Added distillery operations
-                and opened our first public taproom.</p>
+            <div class="timeline-card-wrapper flex-1 bg-white/5 border border-white/10 rounded-2xl p-5 md:p-6 transition-all hover:bg-white/[0.08] hover:border-accent/30 group">
+              <div class="mb-3">
+                <span class="text-accent font-display font-bold text-[10px] tracking-[0.2em] uppercase block mb-1">2013 Milestone</span>
+                <h3 class="font-display font-semibold text-xl text-white group-hover:text-accent transition-colors leading-tight">The Warehouse</h3>
+              </div>
+              <p class="text-white/50 text-sm leading-relaxed max-w-xl">Moved into a 5,000 sq ft converted warehouse. Added distillery operations and opened our first public taproom.</p>
             </div>
           </div>
-          <div class="relative flex items-start gap-6 lg:gap-12 slide-up" style="transition-delay:.2s">
-            <div
-              class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-semibold text-sm flex-shrink-0 z-10 shadow-accent">
+
+          <!-- 2017 Milestone -->
+          <div class="relative flex items-center gap-6 md:gap-10 slide-up" style="transition-delay:.2s">
+            <div class="timeline-dot-glow w-14 h-14 rounded-full bg-accent flex items-center justify-center text-white text-lg flex-shrink-0 z-10 border-4 border-black transition-all">
               <i class="fas fa-trophy"></i>
             </div>
-            <div class="card flex-1">
-              <div class="badge badge-accent mb-2">2017</div>
-              <h3 class="font-display font-semibold text-lg mb-2">National Recognition</h3>
-              <p class="text-gray-500 text-sm">Won "Best New Brewery" at the Great American Beer Festival and expanded
-                distribution to 5 states.</p>
+            <div class="timeline-card-wrapper flex-1 bg-white/5 border border-white/10 rounded-2xl p-5 md:p-6 transition-all hover:bg-white/[0.08] hover:border-accent/30 group">
+              <div class="mb-3">
+                <span class="text-accent font-display font-bold text-[10px] tracking-[0.2em] uppercase block mb-1">2017 Milestone</span>
+                <h3 class="font-display font-semibold text-xl text-white group-hover:text-accent transition-colors leading-tight">National Recognition</h3>
+              </div>
+              <p class="text-white/50 text-sm leading-relaxed max-w-xl">Won "Best New Brewery" at the Great American Beer Festival and expanded distribution to 5 states.</p>
             </div>
           </div>
-          <div class="relative flex items-start gap-6 lg:gap-12 slide-up" style="transition-delay:.3s">
-            <div
-              class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-semibold text-sm flex-shrink-0 z-10 shadow-accent">
+
+          <!-- 2024 Milestone -->
+          <div class="relative flex items-center gap-6 md:gap-10 slide-up" style="transition-delay:.3s">
+            <div class="timeline-dot-glow w-14 h-14 rounded-full bg-accent flex items-center justify-center text-white text-lg flex-shrink-0 z-10 border-4 border-black transition-all">
               <i class="fas fa-rocket"></i>
             </div>
-            <div class="card flex-1">
-              <div class="badge badge-accent mb-2">2024</div>
-              <h3 class="font-display font-semibold text-lg mb-2">The Expansion</h3>
-              <p class="text-gray-500 text-sm">Opened a second location, launched online ordering, and introduced our
-                signature spirits line nationwide.</p>
+            <div class="timeline-card-wrapper flex-1 bg-white/5 border border-white/10 rounded-2xl p-5 md:p-6 transition-all hover:bg-white/[0.08] hover:border-accent/30 group">
+              <div class="mb-3">
+                <span class="text-accent font-display font-bold text-[10px] tracking-[0.2em] uppercase block mb-1">2024 Milestone</span>
+                <h3 class="font-display font-semibold text-xl text-white group-hover:text-accent transition-colors leading-tight">The Expansion</h3>
+              </div>
+              <p class="text-white/50 text-sm leading-relaxed max-w-xl">Opened a second location, launched online ordering, and introduced our signature spirits line nationwide.</p>
             </div>
           </div>
         </div>

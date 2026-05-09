@@ -2195,3 +2195,45 @@ img {
 .social-icon.twitter:hover { background: var(--brand-twitter); border-color: var(--brand-twitter); }
 .social-icon.youtube:hover { background: var(--brand-youtube); border-color: var(--brand-youtube); }
 .social-icon.linkedin:hover { background: var(--brand-linkedin); border-color: var(--brand-linkedin); }
+
+/* ── Custom Timeline Improvements ─────────────────────────── */
+.timeline-card-wrapper {
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.timeline-card-wrapper::before {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  width: 20px;
+  height: 1px;
+  background: rgba(193, 120, 23, 0.2);
+  transform: translateY(-50%);
+  transition: all var(--transition-base);
+  opacity: 0;
+}
+
+.timeline-card-wrapper:hover::before {
+  background: var(--color-accent);
+  width: 30px;
+  left: -40px;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .timeline-card-wrapper::before {
+    display: none;
+  }
+}
+
+.timeline-dot-glow {
+  box-shadow: 0 0 20px rgba(193, 120, 23, 0.3);
+  transition: all var(--transition-base);
+}
+
+.timeline-dot-glow:hover {
+  box-shadow: 0 0 40px rgba(193, 120, 23, 0.6);
+  transform: scale(1.1);
+}

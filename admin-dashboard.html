@@ -214,19 +214,23 @@
   <div id="toast-container"></div>
   <script src="main.js"></script>
   <script>
-    // Revenue Bar Chart
-    initBarChart('revenueChart',
-      ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-      [32000, 28000, 35000, 48290, 0, 0, 0, 0, 0, 0, 0, 0],
-      '#c17817'
-    );
+    // Defer chart init so the browser finishes layout before Chart.js measures the canvas.
+    // This prevents first-render label clipping on the x-axis.
+    requestAnimationFrame(function () {
+      // Revenue Bar Chart
+      initBarChart('revenueChart',
+        ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        [32000, 28000, 35000, 48290, 0, 0, 0, 0, 0, 0, 0, 0],
+        '#c17817'
+      );
 
-    // Demographics Pie Chart
-    initPieChart('demographicsChart',
-      ['21-30', '31-40', '41-50', '51-60', '60+'],
-      [28, 35, 22, 10, 5],
-      ['#c17817', '#111111', '#d4922e', '#e8e0d0', '#222222']
-    );
+      // Demographics Pie Chart
+      initPieChart('demographicsChart',
+        ['21-30', '31-40', '41-50', '51-60', '60+'],
+        [28, 35, 22, 10, 5],
+        ['#c17817', '#111111', '#d4922e', '#e8e0d0', '#222222']
+      );
+    });
   </script>
 </body>
 

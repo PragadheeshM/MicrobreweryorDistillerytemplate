@@ -233,12 +233,28 @@
     return document.documentElement.getAttribute('data-theme') || 'light';
   }
 
+  // Registry of all Chart.js instances so we can refresh them on theme change
+  var _chartRegistry = [];
+
+  function refreshCharts() {
+    _chartRegistry.forEach(function (entry) {
+      if (entry.instance) {
+        entry.instance.destroy();
+      }
+      var fn = window[entry.fn];
+      if (typeof fn === 'function') {
+        entry.instance = fn.apply(null, entry.args);
+      }
+    });
+  }
+
   function toggleTheme() {
     var isDark = getTheme() === 'dark';
     var newTheme = isDark ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('cc-theme', newTheme);
     updateThemeIcons(newTheme === 'dark');
+    refreshCharts();
   }
 
   function updateThemeIcons(isDark) {
@@ -479,7 +495,7 @@
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     const textColor = isDark ? 'rgba(255, 255, 255, 0.7)' : '#666';
 
-    new Chart(ctx, {
+    var instance = new Chart(ctx, {
       type: 'doughnut',
       data: {
         labels: labels,
@@ -495,7 +511,9 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        clip: false,
         cutout: '70%',
+        layout: { padding: { top: 4, bottom: 4, left: 4, right: 4 } },
         plugins: {
           legend: {
             position: 'bottom',
@@ -509,6 +527,15 @@
         },
       },
     });
+
+    // Register for theme-aware refresh
+    var existing = _chartRegistry.find(function (e) { return e.args[0] === canvasId; });
+    if (existing) {
+      existing.instance = instance;
+    } else {
+      _chartRegistry.push({ fn: 'initDoughnutChart', args: [canvasId, labels, data, colors], instance: instance });
+    }
+    return instance;
   };
 
   window.initBarChart = function (canvasId, labels, data, color) {
@@ -519,7 +546,7 @@
     const textColor = isDark ? 'rgba(255, 255, 255, 0.7)' : '#666';
     const gridColor = isDark ? 'rgba(255, 255, 255, 0.08)' : 'rgba(0,0,0,0.05)';
 
-    new Chart(ctx, {
+    var instance = new Chart(ctx, {
       type: 'bar',
       data: {
         labels: labels,
@@ -538,10 +565,13 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        clip: false,
         layout: {
           padding: {
-            left: 10,
-            right: 10
+            left: 12,
+            right: 12,
+            top: 4,
+            bottom: 4
           }
         },
         scales: {
@@ -550,15 +580,21 @@
             grid: { color: gridColor },
             ticks: {
               color: textColor,
-              font: { family: 'Inter', size: 11 }
+              font: { family: 'Inter', size: 11 },
+              padding: 6
             },
           },
           x: {
             grid: { display: false },
             ticks: {
               color: textColor,
-              font: { family: 'Inter', size: 11 }
+              font: { family: 'Inter', size: 11 },
+              padding: 6
             },
+            afterFit: function(scale) {
+              scale.paddingLeft = 14;
+              scale.paddingRight = 14;
+            }
           },
         },
         plugins: {
@@ -568,6 +604,15 @@
         },
       },
     });
+
+    // Register for theme-aware refresh
+    var existing = _chartRegistry.find(function (e) { return e.args[0] === canvasId; });
+    if (existing) {
+      existing.instance = instance;
+    } else {
+      _chartRegistry.push({ fn: 'initBarChart', args: [canvasId, labels, data, color], instance: instance });
+    }
+    return instance;
   };
 
   window.initPieChart = function (canvasId, labels, data, colors) {
@@ -577,7 +622,7 @@
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     const textColor = isDark ? 'rgba(255, 255, 255, 0.7)' : '#666';
 
-    new Chart(ctx, {
+    var instance = new Chart(ctx, {
       type: 'pie',
       data: {
         labels: labels,
@@ -594,6 +639,8 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        clip: false,
+        layout: { padding: { top: 4, bottom: 4, left: 4, right: 4 } },
         plugins: {
           legend: {
             position: 'bottom',
@@ -607,6 +654,15 @@
         },
       },
     });
+
+    // Register for theme-aware refresh
+    var existing = _chartRegistry.find(function (e) { return e.args[0] === canvasId; });
+    if (existing) {
+      existing.instance = instance;
+    } else {
+      _chartRegistry.push({ fn: 'initPieChart', args: [canvasId, labels, data, colors], instance: instance });
+    }
+    return instance;
   };
 
   // ── Smooth Scroll for Anchor Links ────────────────────────
